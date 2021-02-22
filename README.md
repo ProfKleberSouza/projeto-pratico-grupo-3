@@ -1,8 +1,8 @@
 # TÍTULO DO PROJETO
 
-`CURSO Engenharia de computação`
+`CURSO: Engenharia de computação`
 
-`DISCIPLINA Laboratório de Desenvolvimento para Dispositivos Móveis`
+`DISCIPLINA: Laboratório de Desenvolvimento para Dispositivos Móveis`
 
 `1º SEMESTRE`
 

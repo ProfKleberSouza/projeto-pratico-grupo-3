@@ -1,11 +1,11 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
-Engenharia de computação
-`DISCIPLINA`
-Laboratório de Desenvolvimento para Dispositivos Móveis
-`SEMESTRE`
-1º
+`CURSO: Engenharia de computação`
+
+`DISCIPLINA: Laboratório de Desenvolvimento para Dispositivos Móveis`
+
+`1º SEMESTRE`
+
 ## Participantes
 
 Os membros do grupo são: 

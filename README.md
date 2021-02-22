@@ -1,18 +1,19 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO: Engenharia de computação`
 
-`DISCIPLINA`
+`DISCIPLINA: Laboratório de Desenvolvimento para Dispositivos Móveis`
 
-`SEMESTRE`
+`1º SEMESTRE`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Obi-Wan Kenobi 
-- Anakin Skywalker
+- Ana Vitória Menezes
+- Claudio Manoel Jansen
+- Luís Brandão Teixeira
+- Rafael Ferreira Fernandes
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
 
 # Documentação
 

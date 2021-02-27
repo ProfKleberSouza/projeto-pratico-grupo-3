@@ -52,7 +52,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |  ID  | Restrição                                |
 | :--: | ---------------------------------------- |
-|  01  | Fornecer um meio de troca de mensagens entre usuários e administradores |
+|  01  | O projeto deverá ser entregue até o final do semestre |
 |  02  | O projeto deve fornecer um meio de troca de mensagens entre usuários e administradores |
 |  03  | O projeto deve ser desenvolvido com o framework Flutter em linguagem Dart |
-

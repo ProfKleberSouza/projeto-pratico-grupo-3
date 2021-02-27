@@ -1,54 +1,24 @@
 # Especificações Do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Contexto.md"> Documentação de Contexto</a></span>
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
-
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
-se desenvolver profissionalmente através de um mestrado fora do país,
-pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está
-buscando uma agência que o ajude a encontrar universidades na Europa
-que aceitem alunos estrangeiros.
+​	João Paulo tem 23 anos, é estudante de educação física e faz academia para manter um corpo estético e saudável. Treina 5 vezes na semana e quer evitar aglomerações por conta do vírus Covid-19. Com isso, João precisa de uma forma para ir à academia sem que encontre com muitas pessoas.	
 
-
-> Enumere e detalhe as personas da sua solução. Para
-> tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-> Lembre-se que você deve ser enumerar e descrever precisamente e
-> personalizada todos os clientes ideais que sua solução almeja.
+​	Marcelo tem 39 anos e é dono de uma rede de academias. Por conta do lockdown, manteve sua academia fechada por muito tempo. Ele precisa reabrir seu negócio, mas se adequando às legislações vigentes devido ao vírus.
 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| EU COMO... `PERSONA`  | QUERO/PRECISO ... `FUNCIONALIDADE`                           | PARA ... `MOTIVO/VALOR`                                      |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Usuário cliente       | Cadastrar-me no aplicativo                                   | Para ter acesso às academias e horários disponíveis          |
+| Usuário Administrador | Cadastrar minha academia                                     | Para que minha academia seja incluída no catálogo            |
+| Usuário cliente       | Ver a lotação da academia em horários disponíveis            | Para evitar aglomerações na hora do treino, e ter mais segurança |
+| Usuário cliente       | Agendar horário de treino                                    | Para que o usuário escolha o horário mais confortável        |
+| Usuário Administrador | Preciso de um relatório da quantidade de pessoas que frequentaram a academia | Para ter um melhor gerenciamento de fluxo de alunos          |
+| Usuário cliente       | Preciso de contatar os donos da academia                     | Para maiores informações, tirar dúvidas                      |
+| Usuário Administrador | Preciso ter um chat disponível                               | Para prover melhor comunicação com meu cliente               |
 
 ## Requisitos
 
@@ -58,7 +28,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
+|RF-001| Permitir que o usuário cadastre tarefas | ALTA |
 |RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
 
 
@@ -66,8 +36,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA |
+|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA |
 
 > Com base nas Histórias de Usuário, enumere os requisitos da sua
 > solução. Classifique esses requisitos em dois grupos:

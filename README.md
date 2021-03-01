@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# CoGym 
 
 `CURSO: Engenharia de computação`
 

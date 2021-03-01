@@ -1,12 +1,12 @@
 # Introdução
 
 ## Problema
-> ​	Atualmente, o mundo está enfrentando uma epidemia com a propagação do vírus Covid-19, com isso diversos prestadores de serviços tiveram seus negócios abalados financeiramente e estrategicamente. As academias são um desses setores que foram enormemente afetados pelas consequências da epidemia e quarentena em seu funcionamento mais restritivo. Especialmente pela quantidade de pessoas que frequentam esses estabelecimentos, sempre será um risco de contágio. Um melhor gerenciamento da quantidade de pessoas que frequentam as academias, para se ter maior segurança e um menor risco de contágio, é uma preocupação que os donos das academias têm e a tecnologia será sua grande aliada.
+	Atualmente, o mundo está enfrentando uma epidemia com a propagação do vírus Covid-19, com isso diversos prestadores de serviços tiveram seus negócios abalados financeiramente e estrategicamente. As academias são um desses setores que foram enormemente afetados pelas consequências da epidemia e quarentena em seu funcionamento mais restritivo. Especialmente pela quantidade de pessoas que frequentam esses estabelecimentos, sempre será um risco de contágio. Um melhor gerenciamento da quantidade de pessoas que frequentam as academias, para se ter maior segurança e um menor risco de contágio, é uma preocupação que os donos das academias têm e a tecnologia será sua grande aliada.
 >
 
 ## Objetivos
 
-> ​	Esse trabalho tem como objetivos desenvolver um software mobile que ofereça às academias uma plataforma para gerenciamento de fluxo de alunos por horário de agendamento; oferecer aos usuários uma interface que exibe a lotação da academia que frequenta e o quadro com os horários disponíveis para agendamento da aula com suas respectivas regras; ajudar a diminuir o contágio pelo melhor gerenciamento da quantidade de pessoas que frequentam as academias, diminuindo aglomerações e melhorando também o gerenciamento de limpeza dos equipamentos.
+	Esse trabalho tem como objetivos desenvolver um software mobile que ofereça às academias uma plataforma para gerenciamento de fluxo de alunos por horário de agendamento; oferecer aos usuários uma interface que exibe a lotação da academia que frequenta e o quadro com os horários disponíveis para agendamento da aula com suas respectivas regras; ajudar a diminuir o contágio pelo melhor gerenciamento da quantidade de pessoas que frequentam as academias, diminuindo aglomerações e melhorando também o gerenciamento de limpeza dos equipamentos.
 
 ## Justificativa
 

@@ -1,11 +1,11 @@
 # Introdução
 
 ## Problema
-​	Atualmente, enfrentamos um problema mundial com o espalhamento do vírus Covid-19, com isso, diversos prestadores de serviços tiveram seus negócios abalados financeiramente e estrategicamente. Um dos setores mais afetados pela quarentena em seu funcionamento foram as academias, pois é um local de grande risco de contágio do vírus, por ser um espaço com aglomeração de muitas pessoas que compartilham os mesmos aparelhos.
+​	Atualmente, o mundo está enfrentando uma epidemia com a propagação do vírus Covid-19, com isso diversos prestadores de serviços tiveram seus negócios abalados financeiramente e estrategicamente. As academias são um desses setores que foram enormemente afetados pelas consequências da epidemia e quarentena em seu funcionamento mais restritivo. Especialmente pela quantidade de pessoas que frequentam esses estabelecimentos, sempre será um risco de contágio. Um melhor gerenciamento da quantidade de pessoas que frequentam as academias, para se ter maior segurança e um menor risco de contágio, é uma preocupação que os donos das academias têm e a tecnologia será sua grande aliada.
 
 ## Objetivos
 
-​	Esse trabalho tem como objetivo desenvolver um software mobile para controlar o fluxo de alunos por horários em diversas redes de academia por toda parte. Além disso, esse aplicativo mostrará ao aluno os horários com menor fluxo de pessoas, para que consiga agendar sua aula, gerando menos aglomeração. Ademais, essa aplicação fará com que o gestor consiga obter o histórico de alunos por horário, a fim de ter justificativas para órgãos fiscais relacionados ao Covid-19. 
+​	Esse trabalho tem como objetivos desenvolver um software mobile que ofereça às academias uma plataforma para gerenciamento de fluxo de alunos por horário de agendamento; oferecer aos usuários uma interface que exibe a lotação da academia que frequenta e o quadro com os horários disponíveis para agendamento da aula com suas respectivas regras; ajudar a diminuir o contágio pelo melhor gerenciamento da quantidade de pessoas que frequentam as academias, diminuindo aglomerações e melhorando também o gerenciamento de limpeza dos equipamentos.
 
 ## Justificativa
 

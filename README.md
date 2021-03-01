@@ -10,7 +10,7 @@
 
 Os membros do grupo são: 
 - Ana Vitória Menezes
-- Claudio Manoel Jansen
+- Cláudio Manoel Jansen de Oliveira
 - Luís Brandão Teixeira
 - Rafael Ferreira Fernandes
 

@@ -8,25 +8,27 @@ foi utilizado para hospedagem do repositório `upstream`.
 
 ## Estrutura de Repositório - Git Flow
 
-O Git Flow é um conjunto de políticas para organizar as estruturas de branches em um determinado repositório utilizando o versionamento Git.
+##### **O projeto segue a seguinte convenção para o nome dos repositórios:**
 
-Para instalar o git flow:
-
-```
-git flow init 
-```
-
-##### branch
-
-É literalmente uma ramificação da base do código. Quando você deseja adicionar uma nova funcionalidade ou corrigir um erro, é criado uma nova branch garantindo que o código da funcionalidade/erro não seja mesclado nos arquivos do projeto principal.
-
-##### master/main
+##### master
 
 Branch principal do repositório no qual as alterações devem ser realizadas somente através de Pull Requests. O código armazenado neste ponteiro deve ser o código implementado em ambiente de produção.
 
 ##### develop
 
 Branch intermediária baseada na master e todas as novas features devem ser baseadas deste branch.
+
+---
+
+O **GitFlow** é um conjunto de políticas para organizar as estruturas de branches em um determinado repositório utilizando o versionamento Git.
+
+Para instalar o gitflow:
+
+```
+git flow init 
+```
+
+##### O projeto segue a seguinte convenção do GitFlow para nome de branches:
 
 ##### feature/código-do-issue
 
@@ -44,11 +46,11 @@ git flow feature start myFeature
 
 ##### hotfix/nome-do-erro
 
-Branch utilizada para corrigir erros de produção. A branch deve ser baseada na master/main e após a correção deve ser mesclada em develop e master/main
+Branch utilizada para corrigir erros de produção. A branch deve ser baseada na master e após a correção deve ser mesclada em develop e master
 
 ![image-20210305210509485](C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210305210509485.png)
 
-Criando um hotfix branch, deve ser criada a partir da master/main:
+Criando um hotfix branch, deve ser criada a partir da master:
 
 ```
 git flow hotfix start myhotfix

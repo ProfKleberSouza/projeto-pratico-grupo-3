@@ -34,7 +34,7 @@ git flow init
 
 São usadas para desenvolver novas funcionalidades para a próxima release. Esta branch deve existir apenas enquanto a funcionalidade está em desenvolvimento e após finalizado, o código deverá ser mesclado para o branch develop através de Pull Request ou descartado em casos de PoCs (Provas de Conceito).
 
-![image-20210305204409607](C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210305204409607.png)
+![image-20210305204409607](https://nvie.com/img/fb@2x.png)
 
 Imagem obtida no artigo [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) 
 
@@ -48,7 +48,7 @@ git flow feature start myFeature
 
 Branch utilizada para corrigir erros de produção. A branch deve ser baseada na master e após a correção deve ser mesclada em develop e master
 
-![image-20210305210509485](C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210305210509485.png)
+![image-20210305210509485](https://nvie.com/img/hotfix-branches@2x.png)
 
 Criando um hotfix branch, deve ser criada a partir da master:
 

@@ -1,16 +1,12 @@
 # Gerenciamento de Projeto
 
-> Descreva aqui a metodologia de trabalho do grupo para atacar o
-> problema.
+> O grupo utiliza uma metodologia próprio utilizando alguns princípios do Scrum, visando entregas de qualidade, melhoria contínua e agilidade.
 
 ## Divisão de Papéis
 
-> Apresente a divisão de papéis entre os membros do grupo.
+> Ana Vitória Menezes: Desenvolvedora
 >
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+> Cláudio Jansen 
 
 ## Processo
 

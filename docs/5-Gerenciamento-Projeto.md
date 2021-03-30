@@ -48,6 +48,7 @@ Na imagem abaixo temos:
 ·     Associação ao projeto
 
 ·     Associação a qual sprint a estória está alocada
+
 ![image](https://user-images.githubusercontent.com/57811501/112915110-010c9380-90d4-11eb-9d53-778ff2079254.png)
 
 

@@ -56,6 +56,7 @@ Na imagem abaixo temos:
 **Organização do Projeto**
 
 Nosso projeto foi dividido em 5 sprints para durar até o fim do semestre. Esse projeto faz parte da matéria de Laboratório de Desenvolvimento de Dispositivos Móveis:
+
 ![image](https://user-images.githubusercontent.com/57811501/112915050-dfaba780-90d3-11eb-9e24-390eb647993d.png)
 
 
@@ -65,7 +66,8 @@ As sprints estão divididas em 5 Milestones, dentro deles há a descrição gera
 
 
 **A nomenclatura da codificação das estórias**
-![image](https://user-images.githubusercontent.com/57811501/112915083-f18d4a80-90d3-11eb-964f-fffc7b52f72b.png)
+
+![image](https://user-images.githubusercontent.com/57811501/112916821-b42abc00-90d7-11eb-927a-30d2a6a63a51.png)
 ![image](https://user-images.githubusercontent.com/57811501/112915087-f520d180-90d3-11eb-9478-4eb79f1ae383.png)
 
 

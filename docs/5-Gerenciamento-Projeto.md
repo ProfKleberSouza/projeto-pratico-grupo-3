@@ -29,6 +29,7 @@ Foram criadas 5 colunas board:
 ·     Closed – Estória concluída 
 
 Imagem do board abaixo:
+
 ![image](https://user-images.githubusercontent.com/57811501/112915130-0ff34600-90d4-11eb-8ccd-3d37dd273f8b.png)
 
 

@@ -7,11 +7,21 @@ Interface de toda a aplicação mostrando o User Flow e Wireframe da versão par
 
 ### Cliente
 
-User Flow de todas as telas do aplicativo de cliente:
+User Flow de todas as telas do aplicativo de cliente:  
+  
 ![image](https://user-images.githubusercontent.com/63879249/113625804-c5c01680-9637-11eb-8472-e8efc1dcea32.png)
   
-Gif mostrando todo o fluxo da aplicação  
+Gif mostrando todo o fluxo da aplicação do cliente:  
+  
 ![gif](https://i.imgur.com/pqfk1lv.gif)
+  
+User Flow de todas as telas do aplicativo de gerente:  
+  
+![image](https://user-images.githubusercontent.com/64868422/113630076-b348db80-963d-11eb-972e-3eb5312531c8.png)
+  
+Gif mostrando todo o fluxo da aplicação do gerente:  
+  
+![gif](https://i.imgur.com/nHluhON.gif)
 
 ## Wireframes
 
@@ -64,4 +74,6 @@ Gif mostrando todo o fluxo da aplicação
 12. Tela de menu  
     
 ![image](https://user-images.githubusercontent.com/63879249/113626510-a37ac880-9638-11eb-9922-00921ef22936.png)
+
+
 

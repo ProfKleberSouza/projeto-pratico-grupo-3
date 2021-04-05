@@ -81,26 +81,6 @@ Gif mostrando todo o fluxo da aplicação do gerente:
 
 ### Gerente
 
-User Flow de todas as telas do aplicativo de cliente:  
-  
-![image](https://user-images.githubusercontent.com/63879249/113625804-c5c01680-9637-11eb-8472-e8efc1dcea32.png)
-  
-Gif mostrando todo o fluxo da aplicação do cliente:  
-  
-![gif](https://i.imgur.com/pqfk1lv.gif)
-  
-User Flow de todas as telas do aplicativo de gerente:  
-  
-![image](https://user-images.githubusercontent.com/64868422/113630076-b348db80-963d-11eb-972e-3eb5312531c8.png)
-  
-Gif mostrando todo o fluxo da aplicação do gerente:  
-  
-![gif](https://i.imgur.com/nHluhON.gif)
-
-## Wireframes
-
-### Cliente
-
 1. Tela de login     
   
 ![image](https://user-images.githubusercontent.com/64868422/113630630-8e089d00-963e-11eb-90e4-e8f0654a8647.png)

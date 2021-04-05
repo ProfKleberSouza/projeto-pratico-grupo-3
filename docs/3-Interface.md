@@ -7,10 +7,10 @@ Interface de toda a aplicação mostrando o User Flow e Wireframe da versão par
 
 ### Cliente
 
-Wireframe de todas as telas do aplicativo de cliente, junto a um gif mostrando todo o fluxo da aplicação:
-  
+User Flow de todas as telas do aplicativo de cliente:
 ![image](https://user-images.githubusercontent.com/63879249/113625804-c5c01680-9637-11eb-8472-e8efc1dcea32.png)
   
+Gif mostrando todo o fluxo da aplicação  
 ![gif](https://i.imgur.com/pqfk1lv.gif)
 
 ## Wireframes

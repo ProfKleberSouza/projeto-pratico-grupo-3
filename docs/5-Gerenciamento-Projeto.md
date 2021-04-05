@@ -1,6 +1,6 @@
 # Gerenciamento de Projeto
 
-> O grupo utiliza uma metodologia próprio utilizando alguns princípios do Scrum, visando entregas de qualidade, melhoria contínua e agilidade.
+> O grupo utiliza uma metodologia própria utilizando alguns princípios do Scrum, visando entregas de qualidade, melhoria contínua e agilidade.
 
 ## Divisão de Papéis
 
@@ -56,7 +56,7 @@ Na imagem abaixo temos:
 
 **Organização do Projeto**
 
-Nosso projeto foi dividido em 5 sprints para durar até o fim do semestre. Esse projeto faz parte da matéria de Laboratório de Desenvolvimento de Dispositivos Móveis:
+Nosso projeto foi dividido em 5 sprints para durar até o fim do semestre como demonstrado na imagem:
 
 ![image](https://user-images.githubusercontent.com/57811501/112915050-dfaba780-90d3-11eb-9e24-390eb647993d.png)
 

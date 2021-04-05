@@ -1,36 +1,49 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação.md"> Documentação de Especificação</a></span>
-
-> Apresente as principais a interface da plataforma. Discuta como ela
-> foi elaborada de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](2-Especificação.md).
+Interface de toda a aplicação mostrando o User Flow e Wireframe da versão para clientes e para administradores da academia.
 
 ## User Flow
-
-![Exemplo de UserFlow](img/userflow.jpg)
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
+###Cliente
+Wireframe de todas as telas do aplicativo de cliente, junto a um gif mostrando todo o fluxo da aplicação:
+![image](https://user-images.githubusercontent.com/63879249/113625804-c5c01680-9637-11eb-8472-e8efc1dcea32.png)
 
 
 ## Wireframes
+### Cliente
+1. Tela de login 
+![image](https://user-images.githubusercontent.com/63879249/113626087-19cafb00-9638-11eb-9cda-cdcd440a63f4.png)
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+2. Tela de recuperar senha
+![image](https://user-images.githubusercontent.com/63879249/113626121-25b6bd00-9638-11eb-9ed9-98f9294a675a.png)
 
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+3. Tela para cadastrar usuário cliente
+![image](https://user-images.githubusercontent.com/63879249/113626164-3109e880-9638-11eb-9368-571bc8d120e3.png)
+
+4. Tela com horários disponíveis para agendamento
+![image](https://user-images.githubusercontent.com/63879249/113626201-3a935080-9638-11eb-80b7-0643e2eb1331.png)
+
+5. Tela para agendar horário
+![image](https://user-images.githubusercontent.com/63879249/113626253-4aab3000-9638-11eb-9caa-690c85ee9a0f.png)
+
+6. Tela com horário agendado
+![image](https://user-images.githubusercontent.com/63879249/113626389-7c23fb80-9638-11eb-9ce4-f9cb90b86cb1.png)
+
+7. Tela para desmarcar horário
+![image](https://user-images.githubusercontent.com/63879249/113626400-81814600-9638-11eb-91dd-9b2420046fa1.png)
+
+8. Tela de chat com a empresa
+![image](https://user-images.githubusercontent.com/63879249/113626415-88a85400-9638-11eb-8a9d-7f78d7d9ada6.png)
+
+9. Tela de configurações
+![image](https://user-images.githubusercontent.com/63879249/113626431-8e9e3500-9638-11eb-9fe1-4e3ff4bfcae5.png)
+
+10. Tela para editar seu perfil
+![image](https://user-images.githubusercontent.com/63879249/113626452-93fb7f80-9638-11eb-8382-921c953b4363.png)
+
+11. Tela com os canais de contato com a academia
+![image](https://user-images.githubusercontent.com/63879249/113626475-9b228d80-9638-11eb-9d13-60640318ec78.png)
+
+12. Tela de menu
+![image](https://user-images.githubusercontent.com/63879249/113626510-a37ac880-9638-11eb-9922-00921ef22936.png)
+

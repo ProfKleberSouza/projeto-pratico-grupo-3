@@ -14,6 +14,8 @@ User Flow de todas as telas do aplicativo de cliente:
 Gif mostrando todo o fluxo da aplicação do cliente:  
   
 ![gif](https://i.imgur.com/pqfk1lv.gif)
+
+### Gerente
   
 User Flow de todas as telas do aplicativo de gerente:  
   
@@ -78,7 +80,6 @@ Gif mostrando todo o fluxo da aplicação do gerente:
 ## Wireframes
 
 ### Gerente
-
 
 User Flow de todas as telas do aplicativo de cliente:  
   

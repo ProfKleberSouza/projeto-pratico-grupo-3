@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class telaRegistrar extends StatelessWidget {
+class RegisteryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

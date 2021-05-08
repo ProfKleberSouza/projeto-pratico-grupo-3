@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FormLogin extends StatefulWidget {
+// ignore: must_be_immutable
+class LoginForm extends StatefulWidget {
   String labelTextUsuario;
   String labelTextSenha;
 
@@ -9,13 +10,13 @@ class FormLogin extends StatefulWidget {
 
   TextEditingController controller;
 
-  FormLogin({this.labelTextUsuario, this.labelTextSenha, this.controller, this.errorTextUsuario, this.errorTextSenha});
+  LoginForm({this.labelTextUsuario, this.labelTextSenha, this.controller, this.errorTextUsuario, this.errorTextSenha});
 
   @override
   _FormLoginState createState() => _FormLoginState();
 }
 
-class _FormLoginState extends State<FormLogin> {
+class _FormLoginState extends State<LoginForm> {
   bool _focus = false;
   @override
   Widget build(BuildContext context) {

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import './telaRegistrar.dart';
 
-class LoginBotoes extends StatefulWidget{
+class LoginButtons extends StatefulWidget{
 
   @override
-  _LoginBotoesState createState() => _LoginBotoesState();
+  _LoginButtonsState createState() => _LoginButtonsState();
 }
 
-class _LoginBotoesState extends State<LoginBotoes>{
+class _LoginButtonsState extends State<LoginButtons>{
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -50,11 +49,9 @@ class _LoginBotoesState extends State<LoginBotoes>{
                   ),
                 ),
               ),
-              onPressed: (){Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context)=> telaRegistrar())
-              );
-              },
+              onPressed: () => Navigator.pushNamed(context, "telaPrincipal")
+
+
             ),
           ),
           GestureDetector(

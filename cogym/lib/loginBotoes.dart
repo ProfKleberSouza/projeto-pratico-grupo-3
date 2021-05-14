@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './telaRegistrar.dart';
+import './registerPage.dart';
 
 class LoginBotoes extends StatefulWidget{
 
@@ -52,14 +52,14 @@ class _LoginBotoesState extends State<LoginBotoes>{
               ),
               onPressed: (){Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context)=> telaRegistrar())
+                  MaterialPageRoute(builder: (context)=> RegisterPage())
               );
               },
             ),
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, 'telaRegistrar');
+              Navigator.pushNamed(context, 'registerPage');
             },
             child: new Text(
               "Cadastrar",

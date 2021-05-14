@@ -1,9 +1,11 @@
 import 'package:cogym/formLogin.dart';
-import 'package:cogym/telaRegistrar.dart';
+import 'package:cogym/registerPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './formLogin.dart';
 import './loginBotoes.dart';
+import './registerPage.dart';
+
 
 void main() {
   runApp(cogymLogin());
@@ -15,30 +17,50 @@ class cogymLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp (
       debugShowCheckedModeBanner: false,
-      routes: {'telaRegistrar':
-          (context) => telaRegistrar(),
+      routes: {'/registerPage':
+        (context) => RegisterPage(),
       },
       theme: ThemeData(
         scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),
-
+        primaryColor: Colors.amberAccent,
+        fontFamily: "Bebas Neue",
       ),
       home: Scaffold(
         body: Column(
+        children: [
+          Row(
             children: [
               Image.asset('images/whiteLogo.png'),
               FormLogin(
-                labelTextUsuario: 'Usuário',
-                labelTextSenha: 'Senha',
-                controller: _controller,
-                errorTextUsuario: 'Usuário inválida',
-                errorTextSenha: 'Senha inválida',
-              ),
-              LoginBotoes(),
-            ]
+              labelTextUsuario: 'Usuário',
+              labelTextSenha: 'Senha',
+              controller: _controller,
+              errorTextUsuario: 'Usuário inválido',
+              errorTextSenha: 'Senha inválida',
         ),
-      ),
+            ],
+          ),
+          Row(
+            children: [
+              LoginBotoes(),
+            ],
+          ),
+          Row(
+            children: [
+              RegisterPage(
+                labelTextUnidade: 'Unidade',
+                labelTextEndereco: 'Endereço',
+                controller: _controller,
+                errorTextUnidade: 'Unidade inválida',
+                errorTextEndereco: 'Endereço inválido',
+              ),
+            ],
+          ),
+        ]
+        )
+      )
     );
   }
 }

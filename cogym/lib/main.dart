@@ -26,8 +26,7 @@ class cogymLogin extends StatelessWidget {
           fontFamily: "Bebas Neue",
         ),
         home: Scaffold(
-            body: Column(children: [
-          Row(
+          body: Column(
             children: [
               Image.asset('images/whiteLogo.png'),
               FormLogin(
@@ -37,24 +36,16 @@ class cogymLogin extends StatelessWidget {
                 errorTextUsuario: 'Usuário inválido',
                 errorTextSenha: 'Senha inválida',
               ),
-            ],
-          ),
-          Row(
-            children: [
               LoginBotoes(),
-            ],
-          ),
-          Row(
-            children: [
-              RegisterPage(
+              /*RegisterPage(
                 labelTextUnidade: 'Unidade',
                 labelTextEndereco: 'Endereço',
                 controller: _controller,
                 errorTextUnidade: 'Unidade inválida',
                 errorTextEndereco: 'Endereço inválido',
-              ),
+              ),*/
             ],
           ),
-        ])));
+        ));
   }
 }

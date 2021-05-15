@@ -21,20 +21,14 @@ class _AppBarState extends State<AppBarComponent> {
             title: Center(
               // ignore: deprecated_member_use
                 child: FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'telaPrincipal');
+                    },
                     child: Image.asset(
                       'images/Cogymicon_1.png', width: 100,
                     )
                 )
             ),
-            // ignore: deprecated_member_use
-            // leading: GestureDetector(
-            //   onTap: () {
-            //
-            //   },
-            //   child: Image.asset('images/menu_black_24dp.png'),
-            //       // fit: BoxFit.fitHeight),
-            // ),
             backgroundColor: Color(0xffFFDD00),
           ),
         )

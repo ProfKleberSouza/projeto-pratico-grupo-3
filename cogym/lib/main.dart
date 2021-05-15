@@ -18,7 +18,9 @@ void main() {
     routes: {
       'telaRegistrar':(context) => RegisteryPage(),
       'telaLogin': (context) => LoginPage(),
-      'telaPrincipal': (context) => MainPage()
+      'telaPrincipal': (context) => MainPage(),
+      'telaConfigurações': (context) => MainPage(),
+      'telaChat': (context) => MainPage(),
   },
     theme: ThemeData(
       scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),

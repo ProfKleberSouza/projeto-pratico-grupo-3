@@ -3,10 +3,17 @@ import 'package:cogym/Views/MainPage/mainPage.dart';
 import 'package:cogym/Views/RegisteryPage/registeryPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 
 void main() {
   runApp(MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
+      supportedLocales: [const Locale('pt', 'BR')],
     debugShowCheckedModeBanner: false,
     routes: {
       'telaRegistrar':(context) => RegisteryPage(),

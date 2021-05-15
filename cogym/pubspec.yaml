@@ -11,12 +11,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
   cupertino_icons: ^1.0.2
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 flutter:
   uses-material-design: true
@@ -27,4 +30,7 @@ flutter:
           - asset: fonts/BebasNeue-Regular.ttf
   assets:
     - images/whiteLogo.png
+    - images/today_black_24dp.png
+    - images/Cogymicon_1.png
+    - images/menu_black_24dp.png
 

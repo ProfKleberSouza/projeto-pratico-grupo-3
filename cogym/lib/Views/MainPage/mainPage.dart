@@ -1,4 +1,5 @@
 
+import 'package:cogym/Views/Commons/appBarComponent.dart';
 import 'package:flutter/material.dart';
 import 'Components/cardComponent.dart';
 import 'Components/selectGymLabel.dart';
@@ -12,12 +13,7 @@ class _MainPageState  extends State<MainPage> {
   final children = <Widget>[];
   Widget build(BuildContext context) {
    return Scaffold(
-     appBar: AppBar(
-         title: Text(""),//Image(),
-         leading: Icon(Icons.menu),
-         backgroundColor: Color(0xffFFDD00),
-
-     ),
+     appBar: AppBarComponent(),
      body: SingleChildScrollView(
        child: Column(
          children: [

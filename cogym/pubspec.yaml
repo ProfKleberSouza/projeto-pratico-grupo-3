@@ -33,4 +33,7 @@ flutter:
     - images/today_black_24dp.png
     - images/Cogymicon_1.png
     - images/menu_black_24dp.png
-
+    - images/menuSandwich/baseline_chat_white_24dp.png
+    - images/menuSandwich/baseline_event_available_white_24dp.png
+    - images/menuSandwich/baseline_power_settings_new_white_24dp.png
+    - images/menuSandwich/baseline_settings_white_24dp.png

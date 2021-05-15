@@ -28,11 +28,13 @@ class _AppBarState extends State<AppBarComponent> {
                 )
             ),
             // ignore: deprecated_member_use
-            leading: FlatButton(
-              onPressed: () {},
-              child: Image.asset('images/menu_black_24dp.png',
-                  fit: BoxFit.fitHeight),
-            ),
+            // leading: GestureDetector(
+            //   onTap: () {
+            //
+            //   },
+            //   child: Image.asset('images/menu_black_24dp.png'),
+            //       // fit: BoxFit.fitHeight),
+            // ),
             backgroundColor: Color(0xffFFDD00),
           ),
         )

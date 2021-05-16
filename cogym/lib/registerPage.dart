@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
         ),
         body:
             Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                mainAxisAlignment: MainAxisAlignment.center, children: [
 
               FocusScope(
                 child: Padding(
@@ -59,35 +59,35 @@ class _RegisterPageState extends State<RegisterPage> {
                         else
                           return null;
                       },
-                      style: TextStyle(color: Color(0xFFFCF8EF), fontSize: 16),
+                      style: TextStyle(color: Colors.black, fontSize: 16),
                       decoration: InputDecoration(
                         contentPadding:
                         EdgeInsets.symmetric(vertical: 15, horizontal: 16),
-                        labelText: widget.labelTextUnidade,
-                        labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Bebas Neue',
-                            fontSize: 25,
-                            fontWeight: FontWeight.w500,
-                            shadows: [
-                              Shadow(
-                                // bottomLeft
-                                  offset: Offset(-1.5, -1.5),
-                                  color: Colors.white),
-                              Shadow(
-                                // bottomRight
-                                  offset: Offset(1.5, -1.5),
-                                  color: Colors.white),
-                              Shadow(
-                                // topRight
-                                  offset: Offset(1.5, 1.5),
-                                  color: Colors.white),
-                              Shadow(
-                                // topLeft
-                                  offset: Offset(-1.5, 1.5),
-                                  color: Colors.white),
-                            ]),
-                        errorStyle: TextStyle(
+                    labelText: widget.labelTextUnidade,
+                    labelStyle: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Bebas Neue',
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        shadows: [
+                          Shadow(
+                              // bottomLeft
+                              offset: Offset(-1.5, -1.5),
+                              color: Colors.white),
+                          Shadow(
+                              // bottomRight
+                              offset: Offset(1.5, -1.5),
+                              color: Colors.white),
+                          Shadow(
+                              // topRight
+                              offset: Offset(1.5, 1.5),
+                              color: Colors.white),
+                          Shadow(
+                              // topLeft
+                              offset: Offset(-1.5, 1.5),
+                              color: Colors.white),
+                        ]),
+                    errorStyle: TextStyle(
                           color: Theme.of(context).errorColor,
                         ),
                         suffixIcon: _focus

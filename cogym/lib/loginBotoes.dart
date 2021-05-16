@@ -54,7 +54,12 @@ class _LoginBotoesState extends State<LoginBotoes> {
       GestureDetector(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => RegisterPage()));
+              MaterialPageRoute(builder: (context) => RegisterPage(
+                labelTextUnidade: 'Unidade',
+                labelTextEndereco: 'Endereço',
+                errorTextEndereco: 'Unidade inválida',
+                errorTextUnidade: 'Endereço inválido',
+              )));
         },
         child: new Text(
           "Cadastrar",

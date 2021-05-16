@@ -1,5 +1,5 @@
-//import 'package:example/AlertDialogComponentList.dart';
-//import 'package:example/AlertDialogComponentPrint.dart';
+import 'package:example/AlertDialogComponentList.dart';
+import 'package:example/AlertDialogComponentPrint.dart';
 import 'package:flutter/material.dart';
 
 
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  //showDialog(context: context, builder: (context) => AlertDialogComponentPrint());
+                  showDialog(context: context, builder: (context) => AlertDialogComponentPrint());
                 }
             );
           },
@@ -84,7 +84,7 @@ class MyHomePage extends StatelessWidget {
                   )),
               child: ListTile(
                 onTap: () {
-                  //showDialog(context: context, builder: (context) => AlertDialogComponentList(nome: "Joao", cpf: "123.456.789-00", email: "aaaaaa@gmail.com", matricula: 123456, unidade: "Unidade"));
+                  showDialog(context: context, builder: (context) => AlertDialogComponentList(nome: "Joao", cpf: "123.456.789-00", email: "aaaaaa@gmail.com", matricula: 123456, unidade: "Unidade"));
                 },
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(

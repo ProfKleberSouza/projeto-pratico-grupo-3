@@ -27,4 +27,5 @@ flutter:
           - asset: fonts/BebasNeue-Regular.ttf
   assets:
     - images/whiteLogo.png
+    - images/blackLogo.png
 

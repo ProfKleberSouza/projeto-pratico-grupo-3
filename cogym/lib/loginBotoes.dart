@@ -47,14 +47,14 @@ class _LoginBotoesState extends State<LoginBotoes> {
             ),
           ),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => RegisterPage()));
+            // LÓGICA LOGIN
           },
         ),
       ),
       GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, 'registerPage');
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => RegisterPage()));
         },
         child: new Text(
           "Cadastrar",

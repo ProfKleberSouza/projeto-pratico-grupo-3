@@ -1,44 +1,30 @@
-import 'package:cogym/formLogin.dart';
-import 'package:cogym/telaRegistrar.dart';
+import 'package:cogym/Views/LoginPage/loginPage.dart';
+import 'package:cogym/Views/MainPage/mainPage.dart';
+import 'package:cogym/Views/StudentsScheduledPage/studentsScheduledPage.dart';
+import 'package:cogym/Views/RegisteryPage/registeryPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import './formLogin.dart';
-import './loginBotoes.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+
 
 void main() {
-  runApp(cogymLogin());
-}
+  runApp(MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
+      supportedLocales: [const Locale('pt', 'BR')],
+    debugShowCheckedModeBanner: false,
+    routes: {
+      'telaRegistrar':(context) => RegisteryPage(),
+      'telaLogin': (context) => LoginPage(),
+      'telaPrincipal': (context) => MainPage(),
+      'telaConfigurações': (context) => MainPage(),
+      'telaChat': (context) => MainPage(),
+  },
+    theme: ThemeData(
+      scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),
 
-class cogymLogin extends StatelessWidget {
-
-  TextEditingController _controller = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {'telaRegistrar':
-          (context) => telaRegistrar(),
-      },
-      theme: ThemeData(
-          scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),
-
-      ),
-      home: Scaffold(
-        body: Column(
-          children: [
-            Image.asset('images/whiteLogo.png'),
-            FormLogin(
-              labelTextUsuario: 'Usuário',
-              labelTextSenha: 'Senha',
-              controller: _controller,
-              errorTextUsuario: 'Usuário inválida',
-              errorTextSenha: 'Senha inválida',
-            ),
-            LoginBotoes(),
-          ]
-        ),
-      ),
-    );
-  }
+    ),home: LoginPage()));
 }

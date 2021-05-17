@@ -40,6 +40,7 @@ class _MainPageState extends State<MainPage> {
         ));
   }
 
+  // ignore: non_constant_identifier_names
   List<Widget> CardRenderHourBased() {
     var localTime = DateTime.now();
     var now = localTime.hour;
@@ -62,6 +63,7 @@ class _MainPageState extends State<MainPage> {
     } else {
       int hourToPutInCard = now +
           twoHoursAfter; //Only appear cards two hours after the current hour
+      // ignore: unnecessary_statements
       for (hourToPutInCard; hourToPutInCard <= 23; hourToPutInCard++) {
         //During the day
         this.children.add(

@@ -12,7 +12,7 @@ class ScheduleDetailComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // List<Map<String,dynamic>> listPeopleByScheduleConst = json.decode(peopleByScheduleConst);
-    PeopleBySchedule peopleBySchedule = new PeopleBySchedule(11, 10, 30);
+    PeopleBySchedule peopleBySchedule = new PeopleBySchedule(this.hour, 10, 30);
     return AlertDialog(
       contentPadding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
       content: SingleChildScrollView(

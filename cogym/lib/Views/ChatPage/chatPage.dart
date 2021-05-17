@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StudentsScheduledPage extends StatelessWidget {
+class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

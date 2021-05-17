@@ -1,9 +1,8 @@
-import 'Components/alertDialogComponentList.dart';
-import 'Components/alertDialogComponentPrint.dart';
+import 'Components/userDetailDialog.dart';
+import 'Components/printDialog.dart';
 import 'package:flutter/material.dart';
 
-
-class SeeDetails extends StatelessWidget {
+class StudentsScheduledPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,9 +33,10 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  showDialog(context: context, builder: (context) => AlertDialogComponentPrint());
-                }
-            );
+                  showDialog(
+                      context: context,
+                      builder: (context) => PrintDialog());
+                });
           },
         ),
         centerTitle: true,
@@ -80,11 +80,18 @@ class MyHomePage extends StatelessWidget {
             return Container(
               decoration: new BoxDecoration(
                   border: new Border(
-                    bottom: new BorderSide(color: Colors.white, width: 1),
-                  )),
+                bottom: new BorderSide(color: Colors.white, width: 1),
+              )),
               child: ListTile(
                 onTap: () {
-                  showDialog(context: context, builder: (context) => AlertDialogComponentList(nome: "Joao", cpf: "123.456.789-00", email: "aaaaaa@gmail.com", matricula: 123456, unidade: "Unidade"));
+                  showDialog(
+                      context: context,
+                      builder: (context) => UserDetailDialog(
+                          nome: "Joao",
+                          cpf: "123.456.789-00",
+                          email: "aaaaaa@gmail.com",
+                          matricula: 123456,
+                          unidade: "Unidade"));
                 },
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(
@@ -92,7 +99,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 title: Text('Fulano', style: TextStyle(color: Colors.white)),
                 subtitle:
-                Text('da Silva', style: TextStyle(color: Colors.white)),
+                    Text('da Silva', style: TextStyle(color: Colors.white)),
                 trailing: Text("14h", style: TextStyle(color: Colors.white)),
               ),
             );

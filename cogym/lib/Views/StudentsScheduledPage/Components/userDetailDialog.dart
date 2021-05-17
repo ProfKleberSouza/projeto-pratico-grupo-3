@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AlertDialogComponentList extends StatelessWidget {
+class UserDetailDialog extends StatelessWidget {
   final String nome;
   final String cpf;
   final String email;
   final int matricula;
   final String unidade;
 
-  const AlertDialogComponentList({Key key, this.nome, this.cpf, this.email, this.matricula, this.unidade}) : super(key: key);
+  const UserDetailDialog({Key key, this.nome, this.cpf, this.email, this.matricula, this.unidade}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

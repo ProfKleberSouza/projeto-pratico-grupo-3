@@ -18,6 +18,10 @@ class _AppBarState extends State<AppBarComponent> {
         PreferredSize(
           preferredSize: Size.fromHeight(100.0),
           child: AppBar(
+            leading: IconButton(
+            icon: Icon(Icons.menu, color: Colors.black, size: 40,),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            ),
             title: Center(
               // ignore: deprecated_member_use
                 child: FlatButton(

@@ -1,6 +1,8 @@
 import 'package:cogym/Views/Commons/dateUtils.dart';
+import 'package:cogym/Views/MainPage/Components/scheduleDetailComponent.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CardComponent extends StatelessWidget {
   final int hour;
   final DateTime dateTime;
@@ -40,19 +42,11 @@ class CardComponent extends StatelessWidget {
                 // ignore: deprecated_member_use
                 FlatButton(
                     onPressed: () {
-                      showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2021),
-                        lastDate: DateTime.now().add(const Duration(days: 30)),
-                      ).then((pickedDate) {
-                        if (pickedDate == null) {
-                          return;
-                        }
-                        // setState(() {
-                        //   _selectedDate = pickedDate;
-                        // });
-                      });
+                      showDialog(
+                          context: context,
+                          builder: (context) =>
+                          ScheduleDetailComponent(hour: hour, dateTime: dateTime)
+                      );
                     },
                     child: Image.asset('images/today_black_24dp.png'))
               ],

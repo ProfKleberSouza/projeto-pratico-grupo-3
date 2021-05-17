@@ -1,9 +1,9 @@
-import 'package:example/AlertDialogComponentList.dart';
-import 'package:example/AlertDialogComponentPrint.dart';
+import 'Components/alertDialogComponentList.dart';
+import 'Components/alertDialogComponentPrint.dart';
 import 'package:flutter/material.dart';
 
 
-class seeDetails extends StatelessWidget {
+class SeeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

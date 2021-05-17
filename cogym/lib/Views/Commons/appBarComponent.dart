@@ -29,6 +29,26 @@ class _AppBarState extends State<AppBarComponent> {
                     )
                 )
             ),
+            actions: <Widget>[
+              // ignore: deprecated_member_use
+              FlatButton(
+                  onPressed: () {
+                    showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2021),
+                      lastDate: DateTime.now().add(const Duration(days: 30)),
+                    ).then((pickedDate) {
+                      if (pickedDate == null) {
+                        return;
+                      }
+                      // setState(() {
+                      //   _selectedDate = pickedDate;
+                      // });
+                    });
+                  },
+                  child: Image.asset('images/today_black_24dp.png'))
+            ],
             backgroundColor: Color(0xffFFDD00),
           ),
         )

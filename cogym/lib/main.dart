@@ -1,5 +1,6 @@
 import 'package:cogym/Views/LoginPage/loginPage.dart';
 import 'package:cogym/Views/MainPage/mainPage.dart';
+import 'package:cogym/Views/StudentsScheduledPage/studentsScheduledPage.dart';
 import 'package:cogym/Views/RegisteryPage/registeryPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

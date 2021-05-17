@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
-class AlertDialogComponentPrint extends StatelessWidget {
+class PrintDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

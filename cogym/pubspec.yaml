@@ -15,6 +15,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   intl: ^0.17.0
+  toast: ^0.1.5
+  flutter_email_sender: ^5.0.0
 
 dev_dependencies:
   flutter_test:

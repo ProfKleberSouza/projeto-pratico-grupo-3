@@ -1,3 +1,4 @@
+import 'package:cogym/Views/Commons/appBarComponent.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -17,59 +18,60 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xffFFDD00),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-                icon: Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: const Icon(
-                    Icons.menu,
-                    color: Colors.black,
-                    size: 40,
-                  ),
-                ),
-                onPressed: () {
-
-                });
-          },
-        ),
-        centerTitle: true,
-        title: Image.asset(
-          'logo.png',
-          fit: BoxFit.cover,
-          height: 130,
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 40,
-            ),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute<void>(
-                builder: (BuildContext context) {
-                  return Scaffold(
-                    appBar: AppBar(
-                      backgroundColor: Color(0xffFFDD00),
-                      title: const Text('fechar pagina'),
-                    ),
-                    body: const Center(
-                      child: Text(
-                        'Fechar Pagina',
-                        style: TextStyle(fontSize: 24),
-                      ),
-                    ),
-                  );
-                },
-              ));
-            },
-          ),
-          SizedBox(width: 10),
-        ],
-      ),
+      appBar: AppBarComponent(),
+      // AppBar(
+      //   backgroundColor: Color(0xffFFDD00),
+      //   leading: Builder(
+      //     builder: (BuildContext context) {
+      //       return IconButton(
+      //           icon: Padding(
+      //             padding: const EdgeInsets.only(left: 10),
+      //             child: const Icon(
+      //               Icons.menu,
+      //               color: Colors.black,
+      //               size: 40,
+      //             ),
+      //           ),
+      //           onPressed: () {
+      //
+      //           });
+      //     },
+      //   ),
+      //   centerTitle: true,
+      //   title: Image.asset(
+      //     'logo.png',
+      //     fit: BoxFit.cover,
+      //     height: 130,
+      //   ),
+      //   actions: <Widget>[
+      //     IconButton(
+      //       icon: Icon(
+      //         Icons.close,
+      //         color: Colors.black,
+      //         size: 40,
+      //       ),
+      //       onPressed: () {
+      //         Navigator.push(context, MaterialPageRoute<void>(
+      //           builder: (BuildContext context) {
+      //             return Scaffold(
+      //               appBar: AppBar(
+      //                 backgroundColor: Color(0xffFFDD00),
+      //                 title: const Text('fechar pagina'),
+      //               ),
+      //               body: const Center(
+      //                 child: Text(
+      //                   'Fechar Pagina',
+      //                   style: TextStyle(fontSize: 24),
+      //                 ),
+      //               ),
+      //             );
+      //           },
+      //         ));
+      //       },
+      //     ),
+      //     SizedBox(width: 10),
+      //   ],
+      // ),
       body: ListView.builder(
           itemCount: 10,
           itemBuilder: (ctx, index) {

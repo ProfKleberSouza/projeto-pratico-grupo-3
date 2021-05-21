@@ -22,7 +22,7 @@ void main() {
       'telaRegistrar':(context) => RegisteryPage(),
       'telaLogin': (context) => LoginPage(),
       'telaPrincipal': (context) => MainPage(),
-      'telaConfigurações': (context) => MainPage(),
+      'telaConfigurações': (context) => StudentsScheduledPage(),
       'telaChat': (context) => ChatPage(),
   },
     theme: ThemeData(

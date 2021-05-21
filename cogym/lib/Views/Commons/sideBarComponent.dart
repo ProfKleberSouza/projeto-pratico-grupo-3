@@ -24,7 +24,7 @@ class SideBarComponent extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, 'telaPrincipal');
+                              Navigator.popAndPushNamed(context,'telaPrincipal');
                             },
                             child: ListTile(
                               leading: Image.asset(
@@ -44,7 +44,7 @@ class SideBarComponent extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, 'telaConfigurações');
+                              Navigator.popAndPushNamed(context, 'telaConfigurações');
                             },
                             child: ListTile(
                               leading: Image.asset(
@@ -64,7 +64,7 @@ class SideBarComponent extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, 'telaChat');
+                              Navigator.popAndPushNamed(context, 'telaChat');
                             },
                             child: ListTile(
                               leading: Image.asset(
@@ -90,7 +90,7 @@ class SideBarComponent extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, 'telaLogin');
+                  Navigator.popAndPushNamed(context, 'telaLogin');
                 },
                 child: ListTile(
                   contentPadding:

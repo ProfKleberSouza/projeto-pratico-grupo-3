@@ -24,6 +24,7 @@ void main() {
       'telaPrincipal': (context) => MainPage(),
       'telaConfigurações': (context) => StudentsScheduledPage(),
       'telaChat': (context) => ChatPage(),
+      'telaDetalhesHorario': (context) => StudentsScheduledPage(),
   },
     theme: ThemeData(
       scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),

@@ -65,6 +65,18 @@ class ScheduleDetailComponent extends StatelessWidget {
                       fontSize: 25,
                       fontWeight: FontWeight.w500)),
               SizedBox(height: 10),
+              TextButton(
+                  onPressed: ()  {
+                    Navigator.popAndPushNamed(context, 'telaDetalhesHorario');
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 150,
+                    color: Colors.yellow,
+                    child: Center(
+                      child: Text("VER DETALHES", style: TextStyle(color: Colors.black)),
+                    ),
+                  )),
             ],
           ),
         ),

@@ -39,7 +39,7 @@ class _FormLoginState extends State<LoginForm> {
                     else
                       return null;
                   },
-                  style: TextStyle(color: Color(0xFFFCF8EF), fontSize: 16),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
                     labelText: widget.labelTextUsuario,
@@ -112,7 +112,7 @@ class _FormLoginState extends State<LoginForm> {
                     else
                       return null;
                   },
-                  style: TextStyle(color: Color(0xFFFCF8EF), fontSize: 16),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
                     labelText: widget.labelTextSenha,

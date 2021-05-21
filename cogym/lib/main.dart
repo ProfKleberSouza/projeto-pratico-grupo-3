@@ -1,17 +1,17 @@
 import 'package:cogym/Views/LoginPage/loginPage.dart';
 import 'package:cogym/Views/MainPage/mainPage.dart';
-import 'package:cogym/Views/RegisteryPage/registeryPage.dart';
+import 'package:cogym/Views/RegisterPage/registerPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
-      'telaRegistrar':(context) => RegisteryPage(),
-      'telaLogin': (context) => LoginPage(),
-      'telaPrincipal': (context) => MainPage()
+      'registerPage':(context) => RegisterPage(),
+      'loginPage': (context) => LoginPage(),
   },
     theme: ThemeData(
       scaffoldBackgroundColor: Color.fromRGBO(39, 39, 39, 50),

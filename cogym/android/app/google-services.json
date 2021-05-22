@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "995354986950",
+    "project_id": "cogym-aaf32",
+    "storage_bucket": "cogym-aaf32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995354986950:android:a9f980e03c3c7c65fdcac7",
+        "android_client_info": {
+          "package_name": "com.lddm.cogym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995354986950-d9fpvr76jcbrgd1fadfb46aqtkrp0i6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7JUH3cS4KAZbdiLwVn2FzovRYwnsQzO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995354986950-d9fpvr76jcbrgd1fadfb46aqtkrp0i6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

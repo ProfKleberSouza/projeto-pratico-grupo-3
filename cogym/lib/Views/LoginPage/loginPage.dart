@@ -13,20 +13,16 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        body: Column(
-            children: [
-              Image.asset('images/whiteLogo.png'),
-              LoginForm(
-                labelTextUsuario: 'Usuário',
-                labelTextSenha: 'Senha',
-                controller: _controller,
-                errorTextUsuario: 'Usuário inválida',
-                errorTextSenha: 'Senha inválida',
-              ),
-              LoginButtons(
+        body: SingleChildScrollView(
+          child: Column(
+              children: [
+                Image.asset('images/whiteLogo.png'),
+                LoginForm(),
+                LoginButtons(
 
-              ),
-            ]
+                ),
+              ]
+          ),
         ),
       );
   }

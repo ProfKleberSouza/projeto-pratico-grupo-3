@@ -1,22 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class LoginForm extends StatefulWidget {
-  String labelTextUsuario;
-  String labelTextSenha;
-
-  String errorTextUsuario;
-  String errorTextSenha;
-
-  TextEditingController controller;
-
-  LoginForm({this.labelTextUsuario, this.labelTextSenha, this.controller, this.errorTextUsuario, this.errorTextSenha});
-
-  @override
+    @override
   _FormLoginState createState() => _FormLoginState();
 }
 
 class _FormLoginState extends State<LoginForm> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  String _email, _password;
+  final auth = FirebaseAuth.instance;
   bool _focus = false;
   @override
   Widget build(BuildContext context) {
@@ -32,17 +27,12 @@ class _FormLoginState extends State<LoginForm> {
                   setState(() { _focus = focus; });
                 },
                 child:TextFormField(
-                  controller: widget.controller,
-                  validator: widget.errorTextUsuario == "" ? null : (value) {
-                    if (value.isEmpty)
-                      return widget.errorTextUsuario;
-                    else
-                      return null;
-                  },
+                  controller: this.emailController,
                   style: TextStyle(color: Colors.black, fontSize: 20),
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
-                    labelText: widget.labelTextUsuario,
+                    labelText: "Email",
                     labelStyle: TextStyle(
                       color: Colors.black,
                       fontFamily: 'Bebas Neue',
@@ -70,12 +60,6 @@ class _FormLoginState extends State<LoginForm> {
                     errorStyle: TextStyle(
                       color: Theme.of(context).errorColor,
                     ),
-                    suffixIcon: _focus ? IconButton(
-                      icon: Icon(Icons.clear, color: Color(0xFFFCF8EF),),
-                      onPressed: () {
-                        setState(() { widget.controller.text = ""; });
-                      },
-                    ) : null,
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
@@ -93,6 +77,11 @@ class _FormLoginState extends State<LoginForm> {
                       ),
                     ),
                   ),
+                  onChanged: (value) {
+                    setState(() {
+                      _email = value.trim();
+                    });
+                  },
                 )
           ),
             ),
@@ -105,26 +94,21 @@ class _FormLoginState extends State<LoginForm> {
                   setState(() { _focus = focus; });
                 },
                 child:TextFormField(
-                  controller: widget.controller,
-                  validator: widget.errorTextSenha == "" ? null : (value) {
-                    if (value.isEmpty)
-                      return widget.errorTextSenha;
-                    else
-                      return null;
-                  },
+                  controller: passwordController,
                   style: TextStyle(color: Colors.black, fontSize: 20),
+                  obscureText: true,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
-                    labelText: widget.labelTextSenha,
-                    labelStyle: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Bebas Neue',
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500,
-                      shadows: [
-                        Shadow( // bottomLeft
-                            offset: Offset(-1.5, -1.5),
-                            color: Colors.white
+                  contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
+                  labelText: "Senha",
+                  labelStyle: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Bebas Neue',
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
+                    shadows: [
+                      Shadow( // bottomLeft
+                          offset: Offset(-1.5, -1.5),
+                          color: Colors.white
                         ),
                         Shadow( // bottomRight
                             offset: Offset(1.5, -1.5),
@@ -143,12 +127,6 @@ class _FormLoginState extends State<LoginForm> {
                     errorStyle: TextStyle(
                       color: Theme.of(context).errorColor,
                     ),
-                    suffixIcon: _focus ? IconButton(
-                      icon: Icon(Icons.clear, color: Color(0xFFFCF8EF),),
-                      onPressed: () {
-                        setState(() { widget.controller.text = ""; });
-                      },
-                    ) : null,
                     filled: true,
                     fillColor: Colors.white,
                     enabledBorder: OutlineInputBorder(
@@ -166,6 +144,11 @@ class _FormLoginState extends State<LoginForm> {
                       ),
                     ),
                   ),
+                  onChanged: (value) {
+                    setState(() {
+                      _password = value.trim();
+                    });
+                  },
                 )
             ),
           ),

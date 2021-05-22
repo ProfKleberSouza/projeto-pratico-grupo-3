@@ -17,6 +17,10 @@ dependencies:
   intl: ^0.17.0
   toast: ^0.1.5
   flutter_email_sender: ^5.0.0
+  firebase_core: ^1.2.0
+  firebase_database: ^6.1.2
+  firebase_auth: ^1.2.0
+
 
 dev_dependencies:
   flutter_test:

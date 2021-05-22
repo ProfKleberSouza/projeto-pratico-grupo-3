@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 class LoginButtons extends StatefulWidget {
   final String _email;
@@ -55,8 +56,18 @@ class _LoginButtonsState extends State<LoginButtons> {
             ),
             onPressed: () {
               auth.signInWithEmailAndPassword(
-                  email: widget._email, password: widget._password);
-              Navigator.popAndPushNamed(context, 'telaPrincipal');
+                  email: widget._email, password: widget._password).then((_) {
+                Navigator.popAndPushNamed(context, 'telaPrincipal');
+              }).catchError((error) {
+                var errorCode = error.code;
+                print(errorCode);
+                if (errorCode == 'wrong-password') {
+                  _styleSnackBar("Email ou senha incorretos");
+                } else {
+                  _styleSnackBar("Insira um email e senha válidos");
+                }
+              });
+
               // Navigator.pushNamed(context, "telaPrincipal")
             }),
       ),
@@ -75,5 +86,21 @@ class _LoginButtonsState extends State<LoginButtons> {
         ),
       ),
     ]);
+  }
+  _styleSnackBar(String answer) {
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Container(
+          decoration: BoxDecoration(
+              color: Colors.red,
+              border: Border.all(width: 2.0, color: Colors.black),
+              borderRadius: BorderRadius.circular(20)
+          ),
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 80),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Insira um email e senha válidos',
+                style: TextStyle(fontSize: 20, color: Colors.white),textAlign: TextAlign.center),
+          ),
+        ), backgroundColor: Colors.transparent, elevation: 1000, behavior: SnackBarBehavior.floating));
   }
 }

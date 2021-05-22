@@ -1,19 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:toast/toast.dart';
 
-class LoginButtons extends StatefulWidget {
+class LoginButtons extends StatelessWidget {
   final String _email;
   final String _password;
 
-  @override
-  _LoginButtonsState createState() => _LoginButtonsState();
-
   LoginButtons(this._email, this._password);
-}
 
-class _LoginButtonsState extends State<LoginButtons> {
-  // Console()
   @override
   Widget build(BuildContext context) {
     final auth = FirebaseAuth.instance;
@@ -38,7 +31,7 @@ class _LoginButtonsState extends State<LoginButtons> {
         child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor:
-                  MaterialStateProperty.all<Color>(Colors.amberAccent),
+              MaterialStateProperty.all<Color>(Colors.amberAccent),
               foregroundColor: MaterialStateProperty.all<Color>(
                   Color.fromRGBO(39, 39, 39, 50)),
             ),
@@ -56,15 +49,14 @@ class _LoginButtonsState extends State<LoginButtons> {
             ),
             onPressed: () {
               auth.signInWithEmailAndPassword(
-                  email: widget._email, password: widget._password).then((_) {
+                  email: this._email, password: this._password).then((_) {
                 Navigator.popAndPushNamed(context, 'telaPrincipal');
               }).catchError((error) {
                 var errorCode = error.code;
-                print(errorCode);
                 if (errorCode == 'wrong-password') {
-                  _styleSnackBar("Email ou senha incorretos");
+                  _styleSnackBar("Email ou senha incorretos", context);
                 } else {
-                  _styleSnackBar("Insira um email e senha válidos");
+                  _styleSnackBar("Insira um email e senha válidos", context);
                 }
               });
 
@@ -87,7 +79,7 @@ class _LoginButtonsState extends State<LoginButtons> {
       ),
     ]);
   }
-  _styleSnackBar(String answer) {
+  _styleSnackBar(String answer, BuildContext context) {
     return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Container(
           decoration: BoxDecoration(
@@ -99,8 +91,17 @@ class _LoginButtonsState extends State<LoginButtons> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text('Insira um email e senha válidos',
-                style: TextStyle(fontSize: 20, color: Colors.white),textAlign: TextAlign.center),
+                style: TextStyle(fontSize: 20, color: Colors.white),
+                textAlign: TextAlign.center),
           ),
-        ), backgroundColor: Colors.transparent, elevation: 1000, behavior: SnackBarBehavior.floating));
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 1000,
+        behavior: SnackBarBehavior.floating));
   }
+
 }
+
+
+
+

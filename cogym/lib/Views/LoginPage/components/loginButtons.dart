@@ -1,14 +1,20 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginButtons extends StatefulWidget{
+  final String _email;
+  final String _password;
 
   @override
   _LoginButtonsState createState() => _LoginButtonsState();
+  LoginButtons(this._email, this._password);
 }
 
 class _LoginButtonsState extends State<LoginButtons>{
+  // Console()
   @override
   Widget build(BuildContext context) {
+    final auth = FirebaseAuth.instance;
     return  Column(
         children: [
           Padding(
@@ -49,7 +55,11 @@ class _LoginButtonsState extends State<LoginButtons>{
                   ),
                 ),
               ),
-              onPressed: () => Navigator.pushNamed(context, "telaPrincipal")
+              onPressed: (){
+                auth.signInWithEmailAndPassword(email: widget._email, password: widget._password);
+                Navigator.popAndPushNamed(context,'telaPrincipal');
+                // Navigator.pushNamed(context, "telaPrincipal")
+              }
 
 
             ),

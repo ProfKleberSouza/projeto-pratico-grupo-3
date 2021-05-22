@@ -33,13 +33,13 @@ class _FormLoginState extends State<LoginForm> {
                 },
                 child:TextFormField(
                   controller: widget.controller,
-                  validator: widget.errorTextUsuario == "" ? null : (s) {
-                    if (s.isEmpty)
+                  validator: widget.errorTextUsuario == "" ? null : (value) {
+                    if (value.isEmpty)
                       return widget.errorTextUsuario;
                     else
                       return null;
                   },
-                  style: TextStyle(color: Colors.black, fontSize: 16),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
                     labelText: widget.labelTextUsuario,
@@ -106,13 +106,13 @@ class _FormLoginState extends State<LoginForm> {
                 },
                 child:TextFormField(
                   controller: widget.controller,
-                  validator: widget.errorTextSenha == "" ? null : (s) {
-                    if (s.isEmpty)
+                  validator: widget.errorTextSenha == "" ? null : (value) {
+                    if (value.isEmpty)
                       return widget.errorTextSenha;
                     else
                       return null;
                   },
-                  style: TextStyle(color: Colors.black, fontSize: 16),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical:15, horizontal: 16),
                     labelText: widget.labelTextSenha,

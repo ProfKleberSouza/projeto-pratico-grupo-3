@@ -2,7 +2,6 @@ import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
 import 'Components/userDetailDialog.dart';
 import 'Components/printDialog.dart';
-import 'package:flutter/material.dart';
 
 class StudentsScheduledPage extends StatefulWidget {
   StudentScheduledState createState() => StudentScheduledState();

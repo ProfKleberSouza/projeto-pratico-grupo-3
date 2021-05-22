@@ -1,4 +1,4 @@
-import 'package:cogym/Views/Commons/dateUtils.dart';
+import 'package:cogym/Utils/dateUtils.dart';
 import 'package:cogym/Views/MainPage/Components/scheduleDetailComponent.dart';
 import 'package:flutter/material.dart';
 

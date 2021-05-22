@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cogym/Utils/snackBarUtil';
 
 class SideBarComponent extends StatelessWidget {
   final auth = FirebaseAuth.instance;
@@ -97,7 +98,7 @@ class SideBarComponent extends StatelessWidget {
                     Navigator.popAndPushNamed(context, 'telaLogin');
                   }).catchError((error) {
                     var errorCode = error.code;
-                    _styleSnackBar(errorCode, context);
+                    StyleSnackBar(errorCode, context);
                   });
 
                 },
@@ -119,25 +120,5 @@ class SideBarComponent extends StatelessWidget {
         ],
       )),
     );
-  }
-  _styleSnackBar(String answer, BuildContext context) {
-    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Container(
-          decoration: BoxDecoration(
-              color: Colors.red,
-              border: Border.all(width: 2.0, color: Colors.black),
-              borderRadius: BorderRadius.circular(20)
-          ),
-          margin: EdgeInsets.fromLTRB(0, 0, 0, 80),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('Insira um email e senha válidos',
-                style: TextStyle(fontSize: 20, color: Colors.white),
-                textAlign: TextAlign.center),
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 1000,
-        behavior: SnackBarBehavior.floating));
   }
 }

@@ -1,5 +1,5 @@
 import 'package:cogym/Models/PeopleByScheduleModel.dart';
-import 'package:cogym/Views/Commons/dateUtils.dart';
+import 'package:cogym/Utils/dateUtils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

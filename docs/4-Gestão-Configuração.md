@@ -66,13 +66,5 @@ git flow bugfix start mybugfix
 
 ## Hospedagem
 
-> Explique como a hospedagem e o lançamento da plataforma foi feita.
->
-> **Links Úteis**:
->
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o
->   HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+O serviço de hospedagem utilizado pelo grupo será o Heroku, serviço gratis para que seja feita a sustentação de toda a aplicação.
 

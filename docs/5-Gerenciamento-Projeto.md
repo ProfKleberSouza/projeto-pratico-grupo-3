@@ -1,16 +1,16 @@
 # Gerenciamento de Projeto
 
-> O grupo utiliza uma metodologia própria utilizando alguns princípios do Scrum, visando entregas de qualidade, melhoria contínua e agilidade.
+ O grupo utiliza uma metodologia própria utilizando alguns princípios do Scrum, visando entregas de qualidade, melhoria contínua e agilidade.
 
 ## Divisão de Papéis
 
-> Ana Vitória Menezes: Desenvolvedora
->
-> Cláudio Manoel Jansen: Desenvolvedor
->
-> Luís Brandão Teixeira: Desenvolvedor
->
-> Rafael Ferreira Fernandes: Desenvolvedor
+Ana Vitória Menezes: Desenvolvedora
+
+Cláudio Manoel Jansen: Desenvolvedor
+
+Luís Brandão Teixeira: Desenvolvedor
+
+Rafael Ferreira Fernandes: Desenvolvedor
 
 ## Processo
 

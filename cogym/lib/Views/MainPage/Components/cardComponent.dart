@@ -19,7 +19,11 @@ class CardComponent extends StatelessWidget {
         child: InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
-            print('Card tapped.');
+            showDialog(
+                context: context,
+                builder: (context) =>
+                    ScheduleDetailComponent(hour: hour, dateTime: dateTime)
+            );
           },
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.85,
@@ -40,15 +44,7 @@ class CardComponent extends StatelessWidget {
                         fontSize: 25,
                         fontWeight: FontWeight.w500)),
                 // ignore: deprecated_member_use
-                FlatButton(
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (context) =>
-                          ScheduleDetailComponent(hour: hour, dateTime: dateTime)
-                      );
-                    },
-                    child: Image.asset('images/today_black_24dp.png'))
+                Image.asset('images/today_black_24dp.png')
               ],
             ),
           ),

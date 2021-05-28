@@ -68,7 +68,6 @@ class ScheduleDetailComponent extends StatelessWidget {
               ),
               Divider(color: Colors.black, endIndent: 15, indent: 15,),
               if (peopleBySchedule.maxPeople - peopleBySchedule.peopleScheduled == 0) Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(child: Padding(
                     padding: const EdgeInsets.all(5),

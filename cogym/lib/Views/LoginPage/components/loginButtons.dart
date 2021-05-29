@@ -55,9 +55,9 @@ class LoginButtons extends StatelessWidget {
               }).catchError((error) {
                 var errorCode = error.code;
                 if (errorCode == 'wrong-password') {
-                  StyleSnackBar("Email ou senha incorretos", context);
+                  styleSnackBar("Email ou senha incorretos", context);
                 } else {
-                  StyleSnackBar("Insira um email e senha válidos", context);
+                  styleSnackBar("Insira um email e senha válidos", context);
                 }
               });
 

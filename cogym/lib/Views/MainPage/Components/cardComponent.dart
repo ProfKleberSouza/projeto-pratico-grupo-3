@@ -1,3 +1,4 @@
+import 'package:cogym/Models/peopleByScheduleModel.dart';
 import 'package:cogym/Utils/dateUtils.dart';
 import 'package:cogym/Views/MainPage/Components/scheduleDetailComponent.dart';
 import 'package:flutter/material.dart';
@@ -6,9 +7,10 @@ import 'package:flutter/material.dart';
 class CardComponent extends StatelessWidget {
   final int hour;
   final DateTime dateTime;
+  final PeopleBySchedule peopleBySchedule;
   TextEditingController controller;
 
-  CardComponent({this.dateTime, this.hour});
+  CardComponent({this.dateTime, this.hour, this.peopleBySchedule});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-import 'package:cogym/Models/PeopleByScheduleModel.dart';
+import 'package:cogym/Models/peopleByScheduleModel.dart';
 import 'package:cogym/Utils/dateUtils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,13 +6,12 @@ import 'package:flutter/material.dart';
 class ScheduleDetailComponent extends StatelessWidget {
   final int hour;
   final DateTime dateTime;
+  final PeopleBySchedule peopleBySchedule;
 
-  ScheduleDetailComponent({this.hour, this.dateTime});
+  ScheduleDetailComponent({this.hour, this.dateTime, this.peopleBySchedule});
 
   @override
   Widget build(BuildContext context) {
-    // List<Map<String,dynamic>> listPeopleByScheduleConst = json.decode(peopleByScheduleConst);
-    PeopleBySchedule peopleBySchedule = new PeopleBySchedule(this.hour, 10, 30);
     return AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
       contentPadding: const EdgeInsets.fromLTRB(0, 0, 5, 0),

@@ -17,17 +17,6 @@ class ChatPage extends StatelessWidget {
                     bottom: new BorderSide(color: Colors.white, width: 1),
                   )),
               child: ListTile(
-                /*onTap: () {
-                  showDialog(
-                      context: context,
-                      builder: (context) => UserDetailDialog(
-                          nome: "Joao",
-                          cpf: "123.456.789-00",
-                          email: "aaaaaa@gmail.com",
-                          matricula: 123456,
-                          unidade: "Unidade")
-                          );
-                },*/
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(
                       'https://image.flaticon.com/icons/png/512/64/64572.png'),

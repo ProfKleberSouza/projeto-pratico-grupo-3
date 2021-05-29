@@ -1,8 +1,11 @@
+import 'package:cogym/Controller/PeoplePerDay.dart';
+import 'package:cogym/Models/peopleByScheduleModel.dart';
 import 'package:cogym/Views/Commons/appBarComponent.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
 import 'Components/cardComponent.dart';
 import 'Components/selectGymLabel.dart';
+import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
@@ -11,7 +14,10 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final children = <Widget>[];
 
+
   Widget build(BuildContext context) {
+    var futureList = Provider.of<PeoplePerDay>(context).loadPeoplePerDay();
+    List<PeopleBySchedule> peoplePerDay = futureList.asStream().single as List<PeopleBySchedule>;
     return Scaffold(
         appBar: AppBarComponent(),
         drawer: SideBarComponent(),
@@ -35,13 +41,13 @@ class _MainPageState extends State<MainPage> {
                 child: SelectGymLabel(
               labelTextGym: "SELECIONE A UNIDADE",
             )),
-            Center(child: Column(children: CardRenderHourBased()))
+            Center(child: Column(children: CardRenderHourBased(peoplePerDay)))
           ]),
         ));
   }
 
   // ignore: non_constant_identifier_names
-  List<Widget> CardRenderHourBased() {
+  List<Widget> CardRenderHourBased(List<PeopleBySchedule> peoplePerDay) {
     var localTime = DateTime.now();
     var now = localTime.hour;
     var twoHoursAfter = 2;
@@ -49,8 +55,9 @@ class _MainPageState extends State<MainPage> {
     if (now <= 4) {
       //Before 6h morning
       for (int hourToPutInCard = 6; hourToPutInCard <= 23; hourToPutInCard++) {
+        var peoplePerSchedule = takePeopleBySchedule(peoplePerDay,hourToPutInCard);
         this.children.add(
-            CardComponent(hour: hourToPutInCard, dateTime: localTime));
+            CardComponent(hour: hourToPutInCard, dateTime: localTime, peopleBySchedule: peoplePerSchedule));
       }
     } else if (now >= 22) {
       // After 22h
@@ -71,5 +78,11 @@ class _MainPageState extends State<MainPage> {
       }
     }
     return <Widget>[Expanded(flex: 0, child: Column(children: this.children))];
+  }
+  PeopleBySchedule takePeopleBySchedule(List<PeopleBySchedule> peoplePerDay, hour) {
+    for(var item in peoplePerDay){
+      if(item.hour == hour)
+        return(PeopleBySchedule(hour: item.hour,peopleScheduled: item.peopleScheduled,maxPeople: item.maxPeople));
+    }
   }
 }

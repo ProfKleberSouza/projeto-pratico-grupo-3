@@ -1,4 +1,4 @@
-String peopleByScheduleConst = '''[
+[
   {
     "hour": 6,
     "peopleScheduled": 10,
@@ -89,4 +89,4 @@ String peopleByScheduleConst = '''[
     "peopleScheduled": 23,
     "maxPeople": 30
   }
-]''';
+]

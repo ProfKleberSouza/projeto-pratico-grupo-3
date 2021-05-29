@@ -98,7 +98,7 @@ class SideBarComponent extends StatelessWidget {
                     Navigator.popAndPushNamed(context, 'telaLogin');
                   }).catchError((error) {
                     var errorCode = error.code;
-                    StyleSnackBar(errorCode, context);
+                    styleSnackBar(errorCode, context);
                   });
 
                 },

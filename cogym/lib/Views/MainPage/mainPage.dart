@@ -1,5 +1,5 @@
-import 'package:cogym/Controller/PeoplePerDay.dart';
 import 'package:cogym/Models/peopleByScheduleModel.dart';
+import 'package:cogym/Providers/PeoplePerDayProvider.dart';
 import 'package:cogym/Views/Commons/appBarComponent.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +16,13 @@ class _MainPageState extends State<MainPage> {
 
 
   Widget build(BuildContext context) {
-    var futureList = Provider.of<PeoplePerDay>(context).loadPeoplePerDay();
-    List<PeopleBySchedule> peoplePerDay = futureList.asStream().single as List<PeopleBySchedule>;
+    var peoplePerDay = Provider.of<PeoplePerDayProvider>(context, listen: true).loadPeoplePerDay();//.then((value) => value);
+    // List<PeopleBySchedule> peoplePerDay = [];
+    // futureList.then((value) => {
+    //   value.forEach((element) {
+    //     peoplePerDay.add(element);
+    //   })
+    // });
     return Scaffold(
         appBar: AppBarComponent(),
         drawer: SideBarComponent(),
@@ -63,9 +68,10 @@ class _MainPageState extends State<MainPage> {
       // After 22h
       DateTime nextDay = localTime;
       for (int hourToPutInCard = 6; hourToPutInCard <= 23; hourToPutInCard++) {
+        var peoplePerSchedule = takePeopleBySchedule(peoplePerDay,hourToPutInCard);
         this.children.add(CardComponent(
             hour: hourToPutInCard,
-            dateTime: nextDay.add(const Duration(days: 1))));
+            dateTime: nextDay.add(const Duration(days: 1)),peopleBySchedule: peoplePerSchedule));
       }
     } else {
       int hourToPutInCard = now +
@@ -73,8 +79,9 @@ class _MainPageState extends State<MainPage> {
       // ignore: unnecessary_statements
       for (hourToPutInCard; hourToPutInCard <= 23; hourToPutInCard++) {
         //During the day
+        var peoplePerSchedule = takePeopleBySchedule(peoplePerDay,hourToPutInCard);
         this.children.add(
-            CardComponent(hour: hourToPutInCard, dateTime: localTime));
+            CardComponent(hour: hourToPutInCard, dateTime: localTime,peopleBySchedule: peoplePerSchedule));
       }
     }
     return <Widget>[Expanded(flex: 0, child: Column(children: this.children))];

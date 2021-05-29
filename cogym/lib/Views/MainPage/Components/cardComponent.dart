@@ -24,7 +24,7 @@ class CardComponent extends StatelessWidget {
             showDialog(
                 context: context,
                 builder: (context) =>
-                    ScheduleDetailComponent(hour: hour, dateTime: dateTime)
+                    ScheduleDetailComponent(hour: hour, dateTime: dateTime, peopleBySchedule: peopleBySchedule)
             );
           },
           child: SizedBox(

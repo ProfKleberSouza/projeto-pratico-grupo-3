@@ -1,6 +1,5 @@
-import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-StyleSnackBar(String answer, BuildContext context) {
+styleSnackBar(String answer, BuildContext context) {
   return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Container(
         decoration: BoxDecoration(

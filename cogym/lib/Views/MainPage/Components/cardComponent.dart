@@ -1,3 +1,4 @@
+import 'package:cogym/Models/peopleByScheduleModel.dart';
 import 'package:cogym/Utils/dateUtils.dart';
 import 'package:cogym/Views/MainPage/Components/scheduleDetailComponent.dart';
 import 'package:flutter/material.dart';
@@ -6,9 +7,10 @@ import 'package:flutter/material.dart';
 class CardComponent extends StatelessWidget {
   final int hour;
   final DateTime dateTime;
+  final PeopleBySchedule peopleBySchedule;
   TextEditingController controller;
 
-  CardComponent({this.dateTime, this.hour});
+  CardComponent({this.dateTime, this.hour, this.peopleBySchedule});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,11 @@ class CardComponent extends StatelessWidget {
         child: InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
-            print('Card tapped.');
+            showDialog(
+                context: context,
+                builder: (context) =>
+                    ScheduleDetailComponent(hour: hour, dateTime: dateTime, peopleBySchedule: peopleBySchedule)
+            );
           },
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.85,
@@ -40,15 +46,7 @@ class CardComponent extends StatelessWidget {
                         fontSize: 25,
                         fontWeight: FontWeight.w500)),
                 // ignore: deprecated_member_use
-                FlatButton(
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (context) =>
-                          ScheduleDetailComponent(hour: hour, dateTime: dateTime)
-                      );
-                    },
-                    child: Image.asset('images/today_black_24dp.png'))
+                Image.asset('images/today_black_24dp.png')
               ],
             ),
           ),

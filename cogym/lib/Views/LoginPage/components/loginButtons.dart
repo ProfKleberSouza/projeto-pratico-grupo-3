@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:cogym/Utils/snackBarUtil';
+import 'package:cogym/Utils/snackBarUtil.dart';
 
 class LoginButtons extends StatelessWidget {
   final String _email;
@@ -48,18 +48,21 @@ class LoginButtons extends StatelessWidget {
                 ),
               ),
             ),
-            onPressed: () {
-              auth.signInWithEmailAndPassword(
-                  email: this._email, password: this._password).then((_) {
-                Navigator.popAndPushNamed(context, 'telaPrincipal');
-              }).catchError((error) {
-                var errorCode = error.code;
-                if (errorCode == 'wrong-password') {
-                  StyleSnackBar("Email ou senha incorretos", context);
-                } else {
-                  StyleSnackBar("Insira um email e senha válidos", context);
-                }
-              });
+            onPressed: () async {
+              signIn(auth, context);
+
+              // auth.signInWithEmailAndPassword(
+              //     email: this._email, password: this._password).then((_) {
+              //   Navigator.popAndPushNamed(context, 'telaPrincipal');
+              // }).catchError((error) {
+              //   var errorCode = error.code;
+              //   print(error);
+              //   if (errorCode == 'wrong-password') {
+              //     styleSnackBar("Email ou senha incorretos", context);
+              //   } else {
+              //     styleSnackBar("Insira um email e senha válidos", context);
+              //   }
+              // });
 
               // Navigator.pushNamed(context, "telaPrincipal")
             }),
@@ -80,8 +83,23 @@ class LoginButtons extends StatelessWidget {
       ),
     ]);
   }
-}
 
+  Future signIn(auth, context) async {
+    auth.signInWithEmailAndPassword(
+        email: this._email, password: this._password).then((_) {
+      Navigator.popAndPushNamed(context, 'telaPrincipal');
+    }).catchError((error) {
+      var errorCode = error.code;
+      print(error);
+      if (errorCode == 'wrong-password') {
+        styleSnackBar("Email ou senha incorretos", context);
+      } else {
+        styleSnackBar("Insira um email e senha válidos", context);
+      }
+    }
+    );
+  }
+}
 
 
 

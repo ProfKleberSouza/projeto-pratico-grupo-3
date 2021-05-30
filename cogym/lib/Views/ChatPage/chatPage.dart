@@ -66,20 +66,6 @@ class _ThisAppBarState extends State<ThisAppBar> {
                 width: 100,
               ))),
       actions: <Widget>[
-        // IconButton(
-        //     icon: Padding(
-        //       padding: const EdgeInsets.only(right: 15),
-        //       child: const Icon(
-        //         Icons.save,
-        //         color: Colors.black,
-        //         size: 40,
-        //       ),
-        //     ),
-        //     onPressed: () {
-        //       showDialog(
-        //           context: context, builder: (context) => PrintDialog());
-        //     }
-        // ),
         IconButton(
             icon: Padding(
               padding: const EdgeInsets.only(right: 15),
@@ -91,7 +77,7 @@ class _ThisAppBarState extends State<ThisAppBar> {
             ),
             onPressed: () {
               Navigator.pop(context);
-            })
+            }),
       ],
     );
   }

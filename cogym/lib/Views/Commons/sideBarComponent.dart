@@ -1,10 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cogym/Repository/authenticationRepository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cogym/Utils/snackBarUtil.dart';
 
+// ignore: must_be_immutable
 class SideBarComponent extends StatelessWidget {
-  final auth = FirebaseAuth.instance;
+  var authRepository = AuthenticationRepository();
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -94,13 +94,7 @@ class SideBarComponent extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  auth.signOut().then((_) {
-                    Navigator.popAndPushNamed(context, 'telaLogin');
-                  }).catchError((error) {
-                    var errorCode = error.code;
-                    styleSnackBar(errorCode, context);
-                  });
-
+                  authRepository.signOut(context);
                 },
                 child: ListTile(
                   contentPadding:

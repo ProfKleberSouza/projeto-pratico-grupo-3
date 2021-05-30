@@ -1,49 +1,20 @@
 # Projeto da Solução
 
-<span style="color:red">Pré-requisitos: <a href="4-Gestão-Configuração.md"> Ambiente e Ferramentas de Trabalho</a></span>
-
 ## Tecnologias Utilizadas
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+As tecnologias usadas pelo grupo são:
+- Linguagem de programação Dart como base para rodar a aplicação móvel e suportar o  framework Flutter, usado para desenvolver o frontend da aplicação.
+- framework flutter para desenvolver a aplicação móvel e para realizar teste unitários na aplicação.
+- Android Studio como IDE para codificar, emular e rodar o código. 
+- FireBase para construção de backend da aplicação.
+- Heroku como ferramenta para hospedagem da aplicação.
 
 ## Arquitetura da solução
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-
-A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
-que o usuário entra na plataforma, ele é apresentado à tela inicial
-(Tela 1) onde ele é confrontado com as opões de editar seu perfil ou
-então visualizar sua galeria.
-
-Caso ele opte por seguir pelo primeiro caminho (Editar Perfil), ele é
-redirecionado para a tela de edição de perfil (Tela 2), onde pode
-atualizar seus dados cadastrais. Nessa tela, o usuário também pode
-escolher para editar sua foto de perfil. Ao selecionar essa opção, ele é
-redirecionado para a Tela 3, onde ele a imagem expandida do perfil do
-usuário é mostrado. Ao selecionar a opção para atualizar a imagem, uma
-nova janela abre pedindo para o usuário fazer o upload da nova foto.
-Assim que o processo termina um pop-up exibe o status para o usuário
-(Tela 4) e o usuário é redirecionado para a Tela 2.
-
-Caso o usuário opte seguir pelo segundo caminho (Visualizar Galeria) ele
-é redirecionado para a Tela 5 com todas as fotos que o usuário possui. O
-usuário pode clicar em um post qualquer para visualizar os detalhes do
-post (Tela 6). Nessa tela, ele pode então escolher editar o post, sendo
-redirecionado para a Tela 7. Ao editar as informações, o usuário pode
-escolher salvar ou deletar o post. Em ambos os casos o status é
-notificado para o usuário (Tela 8) e em seguida ele é redirecionado
-para a Tela 2.
-
-![Exemplo de UserFlow](img/userflow.jpg)
+A solução foi desenvolvida com a ferramente adobe XD. Nela, existe a opção para prototipar o proejto criado, tornando possível uma análise mais detalhada de como o aplicativo será usado. 
+Segue um GIF de como o protótipo final da aplicação foi feita, o fluxo e arquitetura.
+    
+![gif](https://i.imgur.com/nHluhON.gif)
+  
+  Nesse fluxo é possível observar a aplicação rodando, mostrando a hospedagem, realizada pelo Heroku, e toda a parte de desenvolvimento do código, Dart, Flutter e firebase, todas as funcionalidades modeladas e testadas com o suporte da IDE Android Studio. Mais infirmações sobre todo o fluxo de telas pode ser observado em: 
+<span style="color:red"><a href="3-Interface.md"> Projeto de Interface</a></span>.

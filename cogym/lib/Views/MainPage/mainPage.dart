@@ -1,17 +1,26 @@
+import 'dart:core';
+import 'package:cogym/Models/peopleByScheduleModel.dart';
+import 'package:cogym/Providers/PeoplePerDayProvider.dart';
 import 'package:cogym/Views/Commons/appBarComponent.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
 import 'Components/cardComponent.dart';
 import 'Components/selectGymLabel.dart';
+import 'package:provider/provider.dart';
 
-class MainPage extends StatefulWidget {
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
+class MainPage extends StatelessWidget {
   final children = <Widget>[];
 
-  Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) => FutureBuilder<List<PeopleBySchedule>>(
+        future: takePeopleByDay(context),
+        builder: (context, snapshot) => snapshot.hasData
+            ? _buildWidget(context, snapshot.data)
+            : Container(child: Center(child: CircularProgressIndicator()), color: Color.fromRGBO(39, 39, 39, 50) ),
+      );
+
+  Widget _buildWidget(
+      BuildContext context, List<PeopleBySchedule> peoplePerDay) {
     return Scaffold(
         appBar: AppBarComponent(),
         drawer: SideBarComponent(),
@@ -35,13 +44,13 @@ class _MainPageState extends State<MainPage> {
                 child: SelectGymLabel(
               labelTextGym: "SELECIONE A UNIDADE",
             )),
-            Center(child: Column(children: CardRenderHourBased()))
+            Center(child: Column(children: CardRenderHourBased(peoplePerDay)))
           ]),
         ));
   }
 
   // ignore: non_constant_identifier_names
-  List<Widget> CardRenderHourBased() {
+  List<Widget> CardRenderHourBased(List<PeopleBySchedule> peoplePerDay) {
     var localTime = DateTime.now();
     var now = localTime.hour;
     var twoHoursAfter = 2;
@@ -49,16 +58,23 @@ class _MainPageState extends State<MainPage> {
     if (now <= 4) {
       //Before 6h morning
       for (int hourToPutInCard = 6; hourToPutInCard <= 23; hourToPutInCard++) {
-        this.children.add(
-            CardComponent(hour: hourToPutInCard, dateTime: localTime));
+        var peoplePerSchedule =
+            takePeopleBySchedule(peoplePerDay, hourToPutInCard);
+        this.children.add(CardComponent(
+            hour: hourToPutInCard,
+            dateTime: localTime,
+            peopleBySchedule: peoplePerSchedule));
       }
     } else if (now >= 22) {
       // After 22h
       DateTime nextDay = localTime;
       for (int hourToPutInCard = 6; hourToPutInCard <= 23; hourToPutInCard++) {
+        var peoplePerSchedule =
+            takePeopleBySchedule(peoplePerDay, hourToPutInCard);
         this.children.add(CardComponent(
             hour: hourToPutInCard,
-            dateTime: nextDay.add(const Duration(days: 1))));
+            dateTime: nextDay.add(const Duration(days: 1)),
+            peopleBySchedule: peoplePerSchedule));
       }
     } else {
       int hourToPutInCard = now +
@@ -66,10 +82,30 @@ class _MainPageState extends State<MainPage> {
       // ignore: unnecessary_statements
       for (hourToPutInCard; hourToPutInCard <= 23; hourToPutInCard++) {
         //During the day
-        this.children.add(
-            CardComponent(hour: hourToPutInCard, dateTime: localTime));
+        var peoplePerSchedule =
+            takePeopleBySchedule(peoplePerDay, hourToPutInCard);
+        this.children.add(CardComponent(
+            hour: hourToPutInCard,
+            dateTime: localTime,
+            peopleBySchedule: peoplePerSchedule));
       }
     }
     return <Widget>[Expanded(flex: 0, child: Column(children: this.children))];
+  }
+
+  PeopleBySchedule takePeopleBySchedule(
+      List<PeopleBySchedule> peoplePerDay, hour) {
+    for (var item in peoplePerDay) {
+      if (item.hour == hour)
+        return (PeopleBySchedule(
+            hour: item.hour,
+            peopleScheduled: item.peopleScheduled,
+            maxPeople: item.maxPeople));
+    }
+  }
+
+  Future<List<PeopleBySchedule>> takePeopleByDay(BuildContext context) async {
+    return await Provider.of<PeoplePerDayProvider>(context, listen: true)
+        .loadPeoplePerDay();
   }
 }

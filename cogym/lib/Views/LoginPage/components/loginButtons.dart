@@ -1,16 +1,16 @@
+import 'package:cogym/Repository/authenticationRepository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:cogym/Utils/snackBarUtil.dart';
 
 class LoginButtons extends StatelessWidget {
   final String _email;
   final String _password;
+  var authRepository = AuthenticationRepository();
 
   LoginButtons(this._email, this._password);
 
   @override
   Widget build(BuildContext context) {
-    final auth = FirebaseAuth.instance;
     return Column(children: [
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
@@ -49,22 +49,7 @@ class LoginButtons extends StatelessWidget {
               ),
             ),
             onPressed: () async {
-              signIn(auth, context);
-
-              // auth.signInWithEmailAndPassword(
-              //     email: this._email, password: this._password).then((_) {
-              //   Navigator.popAndPushNamed(context, 'telaPrincipal');
-              // }).catchError((error) {
-              //   var errorCode = error.code;
-              //   print(error);
-              //   if (errorCode == 'wrong-password') {
-              //     styleSnackBar("Email ou senha incorretos", context);
-              //   } else {
-              //     styleSnackBar("Insira um email e senha válidos", context);
-              //   }
-              // });
-
-              // Navigator.pushNamed(context, "telaPrincipal")
+              authRepository.signIn(context, _email, _password);
             }),
       ),
       GestureDetector(
@@ -82,22 +67,6 @@ class LoginButtons extends StatelessWidget {
         ),
       ),
     ]);
-  }
-
-  Future signIn(auth, context) async {
-    auth.signInWithEmailAndPassword(
-        email: this._email, password: this._password).then((_) {
-      Navigator.popAndPushNamed(context, 'telaPrincipal');
-    }).catchError((error) {
-      var errorCode = error.code;
-      print(error);
-      if (errorCode == 'wrong-password') {
-        styleSnackBar("Email ou senha incorretos", context);
-      } else {
-        styleSnackBar("Insira um email e senha válidos", context);
-      }
-    }
-    );
   }
 }
 

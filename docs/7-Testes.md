@@ -1,31 +1,45 @@
 # Avaliação da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="6-Implementação.md"> Projeto da Solução</a></span>
+<span style="color:red">Pré-requisitos: <a href="6-Implementação.md"> Projeto da Solução</a></span>  
 
+Os testes estarão focados no acompanhamento das três principais funcionalidade da aplicação que são elas a tela de login, que envolve o teste das credênciais, feitas pelo Firebase com acompanhamento das credências registradas em banco. A tela de imprimir alunos por horário que mostra ao administrador uma relação de todos os usuários que marcaram para estar em um determinado horário. E, por fim, a tela de chart, responsavel pela troca de mensagens entre os alunos e os administradores da academia.
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
 
 ## Plano de Testes
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+#### Testes unitários:
+
+- Teste unitário mockando a requisição de login e validando o retorno;
+- Teste unitário mockando a requisição de get peopleSchedulePerDay ao Realtime Database e verificando o retorno e o tratamento dos dados;
+- Teste unitário também das classes models de PeopleSchedlued e PeoplePerDay validando suas conversões de Json para Domain;
+- Teste unitario da requisição get historicChat ao Realtime Database e verificando o retorno e o tratamento dos dados;
+
+#### Testes Usabilidade:
+
+- Tela de login: 
+
+  - Verificar se ao digitar sobre o label Email e  Senha a mesma digitação aparece na tela; 
+  - Verificar se ao clicar no botão entrar ele redireciona para página principal;
+
+- Tela principal:
+
+  - Verificar se ao clicar no card de horas aparece um pop-up e suas respectivas informações;
+  - Verificar se ao clicar no menu sanduiche esse aparece o Menu com seus respectivos ícones;
+  - Verificar se ao clicar em calendário aparece um calendário;
+  - Verificar se ao clicar em ícone principal do aplicativo ele abre a mesma tela principal;
+
+- Tela de chat:
+
+  - Verificar se ao apertar na conversa aparece uma tela de chat privado;
+
+  - Verificar se ao digitar a informação no label a mesma informação aparece na tela;
+  - Verificar se a informação digitada enviada aparece na tela de de mensagens enviadas;
+  - Verificar se um histórico aparece na tela de mensagens;
 
 ## Ferramentas de Testes (Opcional)
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+- Mock - Mockito;
+- Cypress - teste de usabilidade;
 
 ## Avaliação
 

@@ -1,42 +1,23 @@
-import 'package:cogym/Views/ChatPage/userChat.dart';
+import 'package:cogym/Views/ChatPage/Components/newMessage.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
 
-class ChatPage extends StatelessWidget {
+import 'Components/messageBubble.dart';
+
+class UserChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ThisAppBar(),
       drawer: SideBarComponent(),
-      body: ListView.builder(
-          itemCount: 1,
-          itemBuilder: (ctx, index) {
-            return Container(
-              decoration: new BoxDecoration(
-                  border: new Border(
-                    bottom: new BorderSide(color: Colors.white, width: 1),
-                  )),
-              child: ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://image.flaticon.com/icons/png/512/64/64572.png'),
-                ),
-                title: Text('Gabriel', style: TextStyle(color: Colors.white)),
-                subtitle:
-                Text('Bom dia, a academia abre aos sabados?', style: TextStyle(color: Colors.white)),
-                trailing: Text("14h", style: TextStyle(color: Colors.white)),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => UserChat(),
-                    ),
-                  );
-                },
-              ),
-            );
-          }
-        )
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            MessageBubble('Bom dia, a academia abre aos sabados?'),
+            NewMessage(),
+          ],
+        ),
+      ),
     );
   }
 }

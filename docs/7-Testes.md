@@ -46,7 +46,7 @@ Em relação ao teste de usabilidade, é um método de verificação de funciona
 ## Ferramentas de Testes (Opcional)
 
 - Mock - Mockito;
-- Cypress - teste de usabilidade;
+- Widget Test(biblioteca do flutter) - teste de usabilidade;
 
 ## Avaliação
 

@@ -1,9 +1,16 @@
 # Avaliação da Aplicação
 
 <span style="color:red">Pré-requisitos: <a href="6-Implementação.md"> Projeto da Solução</a></span>  
-
-Os testes estarão focados no acompanhamento das três principais funcionalidade da aplicação que são elas a tela de login, que envolve o teste das credênciais, feitas pelo Firebase com acompanhamento das credências registradas em banco. A tela de imprimir alunos por horário que mostra ao administrador uma relação de todos os usuários que marcaram para estar em um determinado horário. E, por fim, a tela de chart, responsavel pela troca de mensagens entre os alunos e os administradores da academia.
-
+O objetivo de um teste unitário é verificar a correção de uma unidade de lógica sob uma variedade de condições. Desta forma, nossos testes serão focados em testar uma função, método ou classe usada no negócio.
+##### Ostestesunitáriossão:
+- Testesdafunçãodelogin,querealizaavalidaçãoseexisteumusuáriodoaplicativocadastradocomologinesenhainseridos;
+-  TestesdarequisiçãodogetpeopleSchedulePerDayedogethistoricChatrealizandoumavalidaçãodoretornoetratamentodosdados;
+- TestedasclassesmodelsdePeopleSchedluedePeoplePerDayparaverificaracorreçãodesuasconversõesrealizadasdeJsonparaDomain.
+Em relação ao teste de usabilidade, é um método de verificação de funcionalidades da interface de uma plataforma digital, que leva usuários reais à execução de determinadas tarefas. Após sua realização, é realizada uma análise de usabilidade e das principais dificuldades encontradas neste processo. 
+##### Ostestesdeusabilidadequedefinimossão:
+-  TestesdefuncionalidadedoslabelsnateladeLogindenevegaçãodobotão"Entrar"paratelaprincipal;
+- Testesdefuncionalidadedebotõesdoheadernatelaprincipal,doscardsdehorárioesuarespectivaação;
+- Testesdefuncionalidadedateladechat,aoapertaremumarespectivaconversa,etambémdeenviodemensagenseescritaemlabels.
 
 ## Plano de Testes
 

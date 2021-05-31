@@ -2,15 +2,15 @@
 
 <span style="color:red">Pré-requisitos: <a href="6-Implementação.md"> Projeto da Solução</a></span>  
 O objetivo de um teste unitário é verificar a correção de uma unidade de lógica sob uma variedade de condições. Desta forma, nossos testes serão focados em testar uma função, método ou classe usada no negócio.
-##### Ostestesunitáriossão:
-- Testesdafunçãodelogin,querealizaavalidaçãoseexisteumusuáriodoaplicativocadastradocomologinesenhainseridos;
--  TestesdarequisiçãodogetpeopleSchedulePerDayedogethistoricChatrealizandoumavalidaçãodoretornoetratamentodosdados;
-- TestedasclassesmodelsdePeopleSchedluedePeoplePerDayparaverificaracorreçãodesuasconversõesrealizadasdeJsonparaDomain.
+##### Os testes unitários são:
+- Testes da função de login, que realiza a validação se existe um usuário do aplicativo cadastrado como login e senha inseridos;
+- Testes da requisição do get peopleSchedulePerDay e do get historicChat realizando uma validação do retorno e tratamento dos dados;
+- Teste das classes models de PeopleSchedluedePeoplePerDay para verificar a correção de suas conversões realizadas de Json para Domain.
 Em relação ao teste de usabilidade, é um método de verificação de funcionalidades da interface de uma plataforma digital, que leva usuários reais à execução de determinadas tarefas. Após sua realização, é realizada uma análise de usabilidade e das principais dificuldades encontradas neste processo. 
-##### Ostestesdeusabilidadequedefinimossão:
--  TestesdefuncionalidadedoslabelsnateladeLogindenevegaçãodobotão"Entrar"paratelaprincipal;
-- Testesdefuncionalidadedebotõesdoheadernatelaprincipal,doscardsdehorárioesuarespectivaação;
-- Testesdefuncionalidadedateladechat,aoapertaremumarespectivaconversa,etambémdeenviodemensagenseescritaemlabels.
+##### Os testes de usabilidade que definimos são:
+- Testes de funcionalidade dos labels na tela de Login de navegação do botão "Entrar" para tela principal;
+- Testes de funcionalidade de botões do header na tela principal, dos cards de horário e sua respectiva ação;
+- Testes de funcionalidade da tela de chat, ao apertar em uma respectiva conversa, e também de envio de mensagens e escrita em labels.
 
 ## Plano de Testes
 

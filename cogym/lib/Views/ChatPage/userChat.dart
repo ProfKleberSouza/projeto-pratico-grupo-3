@@ -1,13 +1,23 @@
+import 'package:cogym/Views/ChatPage/Components/newMessage.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
+
+import 'Components/messageBubble.dart';
 
 class UserChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: ThisAppBar(),
-        drawer: SideBarComponent(),
-        body: Text('Bom dia, a academia abre aos sabados?', style: TextStyle(color: Colors.white)),
+      appBar: ThisAppBar(),
+      drawer: SideBarComponent(),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            MessageBubble('Bom dia, a academia abre aos sabados?'),
+            NewMessage(),
+          ],
+        ),
+      ),
     );
   }
 }

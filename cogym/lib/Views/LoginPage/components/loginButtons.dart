@@ -49,7 +49,8 @@ class LoginButtons extends StatelessWidget {
               ),
             ),
             onPressed: () async {
-              authRepository.signIn(context, _email, _password);
+              //authRepository.signIn(context, _email, _password);
+              Navigator.pushNamed(context, 'telaPrincipal');
             }),
       ),
       GestureDetector(

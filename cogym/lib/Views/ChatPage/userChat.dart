@@ -43,7 +43,7 @@ class _UserChatState extends State<UserChat> {
                 itemCount: lista.length,
                 itemBuilder: (ctx, index){
                   return Row(
-                    mainAxisAlignment: MainAxisAlignment.start, // start / end
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children:[
                       MessageBubble(lista.elementAt(index)),
                     ],

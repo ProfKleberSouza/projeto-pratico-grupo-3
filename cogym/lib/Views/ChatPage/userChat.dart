@@ -43,9 +43,9 @@ class _UserChatState extends State<UserChat> {
                 itemCount: lista.length,
                 itemBuilder: (ctx, index){
                   return Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: lista.elementAt(index).contains("*") ? MainAxisAlignment.start : MainAxisAlignment.end,
                     children:[
-                      MessageBubble(lista.elementAt(index)),
+                      lista.elementAt(index).contains("*") ? MessageBubble(lista.elementAt(index).substring(1)) : MessageBubble(lista.elementAt(index)),
                     ],
                   );
                 },

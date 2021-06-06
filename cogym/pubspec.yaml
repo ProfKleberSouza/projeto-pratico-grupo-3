@@ -26,6 +26,7 @@ dependencies:
   firebase_auth_mocks: ^0.6.0
   mockito: ^5.0.9
   rxdart: ^0.27.0
+  mqtt_client: ^9.3.1
 
 
 

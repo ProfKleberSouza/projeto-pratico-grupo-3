@@ -23,7 +23,7 @@ class ChatPage extends StatelessWidget {
                 ),
                 title: Text('Gabriel', style: TextStyle(color: Colors.white)),
                 subtitle:
-                Text('Bom dia, a academia abre aos sabados?', style: TextStyle(color: Colors.white)),
+                Text('Teste', style: TextStyle(color: Colors.white)),
                 trailing: Text("14h", style: TextStyle(color: Colors.white)),
                 onTap: () {
                   Navigator.push(

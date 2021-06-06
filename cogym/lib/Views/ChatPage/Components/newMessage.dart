@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 class NewMessage extends StatefulWidget {
+  Function(String mensagem) aoEnviar;
+
+  NewMessage(this.aoEnviar);
+
   @override
   _NewMessageState createState() => _NewMessageState();
 }
 
 class _NewMessageState extends State<NewMessage> {
-  String enteredMessage = '';
-
-  void sendMessage(){
-    FocusScope.of(context).unfocus();
-    Text(enteredMessage);
-  }
+  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +19,13 @@ class _NewMessageState extends State<NewMessage> {
         children: <Widget>[
           Expanded(
             child: TextField(
+              controller: controller,
               decoration: InputDecoration(labelText: "Enviar mensagem...", fillColor: Colors.white, filled: true),
-              onChanged: (value) {
-                setState(() {
-                  enteredMessage = value;
-                });
-              },
             ),
           ),
           IconButton(
             icon: Icon(Icons.send, color: Colors.white),
-            onPressed: enteredMessage.trim().isEmpty ? null : sendMessage,
+            onPressed: () => widget.aoEnviar(controller.text),
           ),
         ],
       ),

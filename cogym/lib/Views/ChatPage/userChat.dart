@@ -1,20 +1,59 @@
 import 'package:cogym/Views/ChatPage/Components/newMessage.dart';
 import 'package:cogym/Views/Commons/sideBarComponent.dart';
 import 'package:flutter/material.dart';
+import 'Components/connection.dart';
 
 import 'Components/messageBubble.dart';
 
-class UserChat extends StatelessWidget {
+class UserChat extends StatefulWidget {
   @override
+  _UserChatState createState() => _UserChatState();
+}
+
+class _UserChatState extends State<UserChat> {
+  List <String> lista = [];
+  ConnectionController connection;
+
+  @override
+  void initState() {
+    connection = ConnectionController(
+        broker: "test.mosquitto.org",
+        topic: "testeTrabalhoLDDM",
+        onMensage: (String mensagem){
+          setState(() {
+            lista.insert(0, mensagem);
+          });
+        }
+    );
+    connection.startConnection();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ThisAppBar(),
       drawer: SideBarComponent(),
       body: Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            MessageBubble('Bom dia, a academia abre aos sabados?'),
-            NewMessage(),
+            Container(
+              height: 520,
+              child: ListView.builder(
+                reverse: true,
+                itemCount: lista.length,
+                itemBuilder: (ctx, index){
+                  return Row(
+                    mainAxisAlignment: lista.elementAt(index).contains("*") ? MainAxisAlignment.start : MainAxisAlignment.end,
+                    children:[
+                      lista.elementAt(index).contains("*") ? MessageBubble(lista.elementAt(index).substring(1)) : MessageBubble(lista.elementAt(index)),
+                    ],
+                  );
+                },
+              ),
+            ),
+            NewMessage((mensagem){
+              connection.publishMessage(mensagem);
+            }),
           ],
         ),
       ),
